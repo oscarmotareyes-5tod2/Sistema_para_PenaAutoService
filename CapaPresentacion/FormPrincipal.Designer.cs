@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             this.PanelLateral = new System.Windows.Forms.Panel();
+            this.pbusuarios = new System.Windows.Forms.PictureBox();
+            this.pbhistorial = new System.Windows.Forms.PictureBox();
+            this.pbIngresos = new System.Windows.Forms.PictureBox();
+            this.pbEmpleados = new System.Windows.Forms.PictureBox();
+            this.pbvehiculos = new System.Windows.Forms.PictureBox();
+            this.pbcliente = new System.Windows.Forms.PictureBox();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panelCerrarseccion = new System.Windows.Forms.Panel();
             this.btnCerrarSeccion = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
@@ -41,31 +48,24 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.LTitulo = new System.Windows.Forms.Label();
             this.PanelSuperior = new System.Windows.Forms.Panel();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.labelRol = new System.Windows.Forms.Label();
+            this.pictureBoxuser = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.labelBienbenida = new System.Windows.Forms.Label();
-            this.pictureBoxuser = new System.Windows.Forms.PictureBox();
-            this.pbusuarios = new System.Windows.Forms.PictureBox();
-            this.pbhistorial = new System.Windows.Forms.PictureBox();
-            this.pbIngresos = new System.Windows.Forms.PictureBox();
-            this.pbEmpleados = new System.Windows.Forms.PictureBox();
-            this.pbvehiculos = new System.Windows.Forms.PictureBox();
-            this.pbcliente = new System.Windows.Forms.PictureBox();
-            this.pictureIcon = new System.Windows.Forms.PictureBox();
-            this.labelRol = new System.Windows.Forms.Label();
-            this.labelUsuario = new System.Windows.Forms.Label();
             this.PanelLateral.SuspendLayout();
-            this.panelCerrarseccion.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            this.PanelSuperior.SuspendLayout();
-            this.PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbusuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIngresos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbvehiculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcliente)).BeginInit();
+            this.panelCerrarseccion.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
+            this.PanelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).BeginInit();
+            this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelLateral
@@ -91,6 +91,66 @@
             this.PanelLateral.Name = "PanelLateral";
             this.PanelLateral.Size = new System.Drawing.Size(226, 729);
             this.PanelLateral.TabIndex = 0;
+            // 
+            // pbusuarios
+            // 
+            this.pbusuarios.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__1_;
+            this.pbusuarios.Location = new System.Drawing.Point(33, 512);
+            this.pbusuarios.Name = "pbusuarios";
+            this.pbusuarios.Size = new System.Drawing.Size(36, 36);
+            this.pbusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbusuarios.TabIndex = 25;
+            this.pbusuarios.TabStop = false;
+            // 
+            // pbhistorial
+            // 
+            this.pbhistorial.Image = global::CapaPresentacion.Properties.Resources.tiempo_adelante;
+            this.pbhistorial.Location = new System.Drawing.Point(33, 445);
+            this.pbhistorial.Name = "pbhistorial";
+            this.pbhistorial.Size = new System.Drawing.Size(36, 36);
+            this.pbhistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbhistorial.TabIndex = 24;
+            this.pbhistorial.TabStop = false;
+            // 
+            // pbIngresos
+            // 
+            this.pbIngresos.Image = global::CapaPresentacion.Properties.Resources.bandeja_de_entrada__1_;
+            this.pbIngresos.Location = new System.Drawing.Point(33, 371);
+            this.pbIngresos.Name = "pbIngresos";
+            this.pbIngresos.Size = new System.Drawing.Size(36, 36);
+            this.pbIngresos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbIngresos.TabIndex = 23;
+            this.pbIngresos.TabStop = false;
+            // 
+            // pbEmpleados
+            // 
+            this.pbEmpleados.Image = global::CapaPresentacion.Properties.Resources.empleados_mujer_hombre;
+            this.pbEmpleados.Location = new System.Drawing.Point(33, 297);
+            this.pbEmpleados.Name = "pbEmpleados";
+            this.pbEmpleados.Size = new System.Drawing.Size(36, 36);
+            this.pbEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEmpleados.TabIndex = 22;
+            this.pbEmpleados.TabStop = false;
+            // 
+            // pbvehiculos
+            // 
+            this.pbvehiculos.Image = global::CapaPresentacion.Properties.Resources.lado_del_coche;
+            this.pbvehiculos.Location = new System.Drawing.Point(33, 230);
+            this.pbvehiculos.Name = "pbvehiculos";
+            this.pbvehiculos.Size = new System.Drawing.Size(36, 36);
+            this.pbvehiculos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbvehiculos.TabIndex = 21;
+            this.pbvehiculos.TabStop = false;
+            // 
+            // pbcliente
+            // 
+            this.pbcliente.Image = global::CapaPresentacion.Properties.Resources.atencion_al_cliente__3_;
+            this.pbcliente.Location = new System.Drawing.Point(33, 156);
+            this.pbcliente.Name = "pbcliente";
+            this.pbcliente.Size = new System.Drawing.Size(36, 36);
+            this.pbcliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcliente.TabIndex = 20;
+            this.pbcliente.TabStop = false;
             // 
             // btnEmpleados
             // 
@@ -141,6 +201,17 @@
             this.panelLogo.Size = new System.Drawing.Size(222, 98);
             this.panelLogo.TabIndex = 12;
             // 
+            // pictureIcon
+            // 
+            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIcon.Image = global::CapaPresentacion.Properties.Resources.herramientas__2_;
+            this.pictureIcon.Location = new System.Drawing.Point(15, 37);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(42, 37);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIcon.TabIndex = 2;
+            this.pictureIcon.TabStop = false;
+            // 
             // btnPrincipal
             // 
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
@@ -169,6 +240,7 @@
             this.btnVehiculos.Text = "Vehiculos";
             this.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculos.UseVisualStyleBackColor = true;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
             // 
             // btnHistorial
             // 
@@ -254,6 +326,37 @@
             this.PanelSuperior.Size = new System.Drawing.Size(1124, 100);
             this.PanelSuperior.TabIndex = 1;
             // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.Location = new System.Drawing.Point(976, 71);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(49, 15);
+            this.labelUsuario.TabIndex = 12;
+            this.labelUsuario.Text = "Usuario";
+            // 
+            // labelRol
+            // 
+            this.labelRol.AutoSize = true;
+            this.labelRol.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRol.Location = new System.Drawing.Point(975, 40);
+            this.labelRol.Name = "labelRol";
+            this.labelRol.Size = new System.Drawing.Size(33, 19);
+            this.labelRol.TabIndex = 11;
+            this.labelRol.Text = "Rol";
+            // 
+            // pictureBoxuser
+            // 
+            this.pictureBoxuser.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxuser.Image = global::CapaPresentacion.Properties.Resources.circulo_de_usuario;
+            this.pictureBoxuser.Location = new System.Drawing.Point(903, 40);
+            this.pictureBoxuser.Name = "pictureBoxuser";
+            this.pictureBoxuser.Size = new System.Drawing.Size(42, 37);
+            this.pictureBoxuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxuser.TabIndex = 10;
+            this.pictureBoxuser.TabStop = false;
+            // 
             // PanelContenedor
             // 
             this.PanelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -274,108 +377,6 @@
             this.labelBienbenida.TabIndex = 11;
             this.labelBienbenida.Text = "¡Bienvenido/a al Sistema!";
             // 
-            // pictureBoxuser
-            // 
-            this.pictureBoxuser.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxuser.Image = global::CapaPresentacion.Properties.Resources.circulo_de_usuario;
-            this.pictureBoxuser.Location = new System.Drawing.Point(903, 40);
-            this.pictureBoxuser.Name = "pictureBoxuser";
-            this.pictureBoxuser.Size = new System.Drawing.Size(42, 37);
-            this.pictureBoxuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxuser.TabIndex = 10;
-            this.pictureBoxuser.TabStop = false;
-            // 
-            // pbusuarios
-            // 
-            this.pbusuarios.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__1_;
-            this.pbusuarios.Location = new System.Drawing.Point(33, 512);
-            this.pbusuarios.Name = "pbusuarios";
-            this.pbusuarios.Size = new System.Drawing.Size(36, 36);
-            this.pbusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbusuarios.TabIndex = 25;
-            this.pbusuarios.TabStop = false;
-            // 
-            // pbhistorial
-            // 
-            this.pbhistorial.Image = global::CapaPresentacion.Properties.Resources.tiempo_adelante;
-            this.pbhistorial.Location = new System.Drawing.Point(33, 445);
-            this.pbhistorial.Name = "pbhistorial";
-            this.pbhistorial.Size = new System.Drawing.Size(36, 36);
-            this.pbhistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbhistorial.TabIndex = 24;
-            this.pbhistorial.TabStop = false;
-            // 
-            // pbIngresos
-            // 
-            this.pbIngresos.Image = global::CapaPresentacion.Properties.Resources.bandeja_de_entrada__1_;
-            this.pbIngresos.Location = new System.Drawing.Point(33, 371);
-            this.pbIngresos.Name = "pbIngresos";
-            this.pbIngresos.Size = new System.Drawing.Size(36, 36);
-            this.pbIngresos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbIngresos.TabIndex = 23;
-            this.pbIngresos.TabStop = false;
-            // 
-            // pbEmpleados
-            // 
-            this.pbEmpleados.Image = global::CapaPresentacion.Properties.Resources.empleados_mujer_hombre;
-            this.pbEmpleados.Location = new System.Drawing.Point(33, 297);
-            this.pbEmpleados.Name = "pbEmpleados";
-            this.pbEmpleados.Size = new System.Drawing.Size(36, 36);
-            this.pbEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEmpleados.TabIndex = 22;
-            this.pbEmpleados.TabStop = false;
-            // 
-            // pbvehiculos
-            // 
-            this.pbvehiculos.Image = global::CapaPresentacion.Properties.Resources.lado_del_coche;
-            this.pbvehiculos.Location = new System.Drawing.Point(33, 230);
-            this.pbvehiculos.Name = "pbvehiculos";
-            this.pbvehiculos.Size = new System.Drawing.Size(36, 36);
-            this.pbvehiculos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbvehiculos.TabIndex = 21;
-            this.pbvehiculos.TabStop = false;
-            // 
-            // pbcliente
-            // 
-            this.pbcliente.Image = global::CapaPresentacion.Properties.Resources.atencion_al_cliente__3_;
-            this.pbcliente.Location = new System.Drawing.Point(33, 156);
-            this.pbcliente.Name = "pbcliente";
-            this.pbcliente.Size = new System.Drawing.Size(36, 36);
-            this.pbcliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbcliente.TabIndex = 20;
-            this.pbcliente.TabStop = false;
-            // 
-            // pictureIcon
-            // 
-            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIcon.Image = global::CapaPresentacion.Properties.Resources.herramientas__2_;
-            this.pictureIcon.Location = new System.Drawing.Point(15, 37);
-            this.pictureIcon.Name = "pictureIcon";
-            this.pictureIcon.Size = new System.Drawing.Size(42, 37);
-            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIcon.TabIndex = 2;
-            this.pictureIcon.TabStop = false;
-            // 
-            // labelRol
-            // 
-            this.labelRol.AutoSize = true;
-            this.labelRol.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRol.Location = new System.Drawing.Point(975, 40);
-            this.labelRol.Name = "labelRol";
-            this.labelRol.Size = new System.Drawing.Size(33, 19);
-            this.labelRol.TabIndex = 11;
-            this.labelRol.Text = "Rol";
-            // 
-            // labelUsuario
-            // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuario.Location = new System.Drawing.Point(976, 71);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(49, 15);
-            this.labelUsuario.TabIndex = 12;
-            this.labelUsuario.Text = "Usuario";
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,20 +391,20 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.PanelLateral.ResumeLayout(false);
-            this.panelCerrarseccion.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.PanelSuperior.ResumeLayout(false);
-            this.PanelSuperior.PerformLayout();
-            this.PanelContenedor.ResumeLayout(false);
-            this.PanelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbusuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIngresos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbvehiculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcliente)).EndInit();
+            this.panelCerrarseccion.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
+            this.PanelSuperior.ResumeLayout(false);
+            this.PanelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).EndInit();
+            this.PanelContenedor.ResumeLayout(false);
+            this.PanelContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }

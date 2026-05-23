@@ -55,7 +55,7 @@ namespace CapaPresentacion
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
             LTitulo.Text = "Dashboard Principal";
-            AbrirFormulario(new Form2Principal());  
+            AbrirFormulario(new FrmBienbenida());  
         }
 
         private void btnIngresos_Click(object sender, EventArgs e)
@@ -67,6 +67,12 @@ namespace CapaPresentacion
         {
             LTitulo.Text = "Usuarios del Sistema";
             AbrirFormulario(new FrmUsuarios()); 
+        }
+
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmVehiculos());
+            LTitulo.Text = "Gestión de Vehículos en el Taller";
         }
     }
 }

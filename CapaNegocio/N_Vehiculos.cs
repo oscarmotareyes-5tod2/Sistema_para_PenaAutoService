@@ -27,5 +27,10 @@ namespace CapaNegocio
 
             return obj.BuscarVehiculos(buscar);
         }
+
+        public static void EntregarVehiculo(int idOrden)
+        {
+            D_Vehiculos.EntregarVehiculo(idOrden);
+        }
     }
 }

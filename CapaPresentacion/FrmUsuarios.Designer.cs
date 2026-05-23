@@ -41,6 +41,7 @@
             this.labelUAccionesR = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.labelUsuarios = new System.Windows.Forms.Label();
+            this.labelsub = new System.Windows.Forms.Label();
             this.panelUsuarios.SuspendLayout();
             this.panelUAccionesR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             this.panelUsuarios.BackColor = System.Drawing.Color.White;
             this.panelUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUsuarios.Controls.Add(this.labelsub);
             this.panelUsuarios.Controls.Add(this.txtBuscar);
             this.panelUsuarios.Controls.Add(this.labelBuscar);
             this.panelUsuarios.Controls.Add(this.panelUAccionesR);
@@ -188,6 +190,17 @@
             this.labelUsuarios.TabIndex = 11;
             this.labelUsuarios.Text = "Usuarios:";
             // 
+            // labelsub
+            // 
+            this.labelsub.AutoSize = true;
+            this.labelsub.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsub.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelsub.Location = new System.Drawing.Point(36, 55);
+            this.labelsub.Name = "labelsub";
+            this.labelsub.Size = new System.Drawing.Size(118, 15);
+            this.labelsub.TabIndex = 17;
+            this.labelsub.Text = "Gestión de Usuarios:";
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,5 +238,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label labelBuscar;
         public System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Label labelsub;
     }
 }

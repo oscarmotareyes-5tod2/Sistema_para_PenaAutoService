@@ -66,5 +66,20 @@ namespace CapaDatos
 
             return dt;
         }
+
+        public static void EntregarVehiculo(int idOrden)
+        {
+            SqlConnection cn = Conexion.ObtenerConexion();
+
+            SqlCommand cmd = new SqlCommand("sp_EntregarVehiculo", cn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@IdOrden", idOrden);
+
+            cn.Open();
+            cmd.ExecuteNonQuery();
+            cn.Close();
+        }
     }
 }

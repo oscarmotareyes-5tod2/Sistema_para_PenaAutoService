@@ -183,6 +183,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap entrega_de_mano_en_mano {
+            get {
+                object obj = ResourceManager.GetObject("entrega-de-mano-en-mano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap herramientas__2_ {
             get {
                 object obj = ResourceManager.GetObject("herramientas (2)", resourceCulture);
