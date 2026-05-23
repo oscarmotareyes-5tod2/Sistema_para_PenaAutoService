@@ -29,6 +29,8 @@ namespace CapaPresentacion
                user .ListarUsuarios();
         }
 
+      
+
         private void BuscarUsuarios()
         {
             N_Usuarios negocio =new N_Usuarios();
@@ -57,25 +59,37 @@ namespace CapaPresentacion
 
         private void btnDesactivar_Click(object sender, EventArgs e)
         {
-            int idUsuario =Convert.ToInt32(
-          dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
+            if (dgvUsuarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show(
+                    "Seleccione un usuario",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
 
-            user.DesactivarUsuario(idUsuario);
+                return;
+            }
 
             DialogResult resultado =
-                       MessageBox.Show(
-                           "¿Desea actualizar este usuario?",
-                           "Confirmar",
-                           MessageBoxButtons.YesNo,
-                           MessageBoxIcon.Question);
+                MessageBox.Show(
+                    "¿Desea desactivar este usuario?",
+                    "Confirmar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
 
             if (resultado == DialogResult.No)
             {
                 return;
             }
 
+            int idUsuario = Convert.ToInt32(
+                dgvUsuarios.SelectedRows[0]
+                .Cells["IdUsuario"].Value);
+
             user.DesactivarUsuario(idUsuario);
-            MessageBox.Show("Usuario desactivado");
+
+            MessageBox.Show(
+                "Usuario desactivado");
 
             ListarUsuarios();
         }
@@ -107,53 +121,21 @@ namespace CapaPresentacion
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dgvUsuarios.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Seleccione un usuario");
-                return;
-            }
-            
+            if (dgvUsuarios.Rows.Count == 0) 
+            { MessageBox.Show("Seleccione un usuario");
+                return; }
 
             FrmNuevouser frm = new FrmNuevouser();
-            dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            frm.idUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
 
-            frm.CargarRoles();
-            frm.labelNUSer.Text = "Actulizar Usuario";
-            frm.pictureBoxNuser.Image = Properties.Resources.refrescar__1_;
-
-            frm.idUsuario =
-                Convert.ToInt32(
-                    dgvUsuarios.SelectedRows[0].Cells["IdUsuario"].Value);
-
-            frm.txtUsuario.Text =
-                dgvUsuarios.SelectedRows[0].Cells["Usuario"].Value.ToString();
-
-            frm.txtClave.Text =
-                dgvUsuarios.SelectedRows[0].Cells["Contraseña"].Value.ToString();
-
-            string rol = dgvUsuarios.SelectedRows[0]
-            .Cells["Rol"].Value.ToString().Trim().ToLower();
-
-            if (rol == "administrador")
-            {
-                frm.cmbRol.SelectedIndex = 0;
-            }
-            else if (rol == "recepcionista")
-            {
-                frm.cmbRol.SelectedIndex = 1;
-            }
-            else if (rol == "mecanico")
-            {
-                frm.cmbRol.SelectedIndex = 2;
-            }
-
-            frm.esEditar = true;
-
-            frm.ShowDialog();
-
+            frm.txtUsuario.Text = dgvUsuarios.CurrentRow.Cells["Usuario"].Value.ToString(); 
+            
+            frm.txtClave.Text = dgvUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString(); 
+            
+            frm.cmbRol.SelectedText = dgvUsuarios.CurrentRow.Cells["Rol"].Value.ToString(); 
+            
+            frm.esEditar = true; frm.ShowDialog(); 
             ListarUsuarios();
-
-
         }
 
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

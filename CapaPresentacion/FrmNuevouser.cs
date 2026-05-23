@@ -41,13 +41,14 @@ namespace CapaPresentacion
 
         N_Roles negocioRoles =new N_Roles();
 
-        public void CargarRoles()
+        private void CargarRoles()
         {
-            cmbRol.Items.Clear();
+            cmbRol.DataSource = negocioRoles.ListarRoles();
 
-            cmbRol.Items.Add("Administrador"); // 0
-            cmbRol.Items.Add("Recepcionista"); // 1
-            cmbRol.Items.Add("Mecanico");      // 2
+            cmbRol.DisplayMember = "NombreRol";
+            cmbRol.ValueMember = "IdRol";
+
+            cmbRol.SelectedIndex = -1;
         }
 
         FrmUsuarios gr = new FrmUsuarios();
