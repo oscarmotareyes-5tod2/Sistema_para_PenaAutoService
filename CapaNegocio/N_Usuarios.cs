@@ -23,14 +23,29 @@ namespace CapaNegocio
             return datos.ListarUsuarios();
         }
 
+        public DataTable ListarUsuariosDesactivados()
+        {
+            return datos.ListarUsuariosDesactivados();
+        }
+
         public DataTable BuscarUsuarios(string buscar)
         {
             return datos.BuscarUsuarios(buscar);
         }
 
+        public DataTable BuscarUsuariosDesactivados(string buscar)
+        {
+            return datos.BuscarUsuariosDesactivados(buscar);
+        }
+
         public void DesactivarUsuario(int idUsuario)
         {
             datos.DesactivarUsuario(idUsuario);
+        }
+
+        public void ResactivarUsuario(int idUsuario)
+        {
+            datos.ReactivarUsuario(idUsuario);
         }
 
         public void ActualizarUsuario(E_Usuarios usuario)

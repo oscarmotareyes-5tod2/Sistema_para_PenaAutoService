@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelUsuarios = new System.Windows.Forms.Panel();
+            this.labelsub = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.panelUAccionesR = new System.Windows.Forms.Panel();
@@ -41,13 +42,15 @@
             this.labelUAccionesR = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.labelUsuarios = new System.Windows.Forms.Label();
-            this.labelsub = new System.Windows.Forms.Label();
+            this.pbReactivar = new System.Windows.Forms.PictureBox();
+            this.btnReactivar = new System.Windows.Forms.Button();
             this.panelUsuarios.SuspendLayout();
             this.panelUAccionesR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDesactivaruser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNUSer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReactivar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUsuarios
@@ -65,6 +68,17 @@
             this.panelUsuarios.Size = new System.Drawing.Size(837, 531);
             this.panelUsuarios.TabIndex = 0;
             this.panelUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUsuarios_Paint);
+            // 
+            // labelsub
+            // 
+            this.labelsub.AutoSize = true;
+            this.labelsub.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsub.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelsub.Location = new System.Drawing.Point(36, 55);
+            this.labelsub.Name = "labelsub";
+            this.labelsub.Size = new System.Drawing.Size(118, 15);
+            this.labelsub.TabIndex = 17;
+            this.labelsub.Text = "Gestión de Usuarios:";
             // 
             // txtBuscar
             // 
@@ -87,6 +101,8 @@
             // panelUAccionesR
             // 
             this.panelUAccionesR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUAccionesR.Controls.Add(this.pbReactivar);
+            this.panelUAccionesR.Controls.Add(this.btnReactivar);
             this.panelUAccionesR.Controls.Add(this.pictureBox3);
             this.panelUAccionesR.Controls.Add(this.pbDesactivaruser);
             this.panelUAccionesR.Controls.Add(this.pbNUSer);
@@ -98,11 +114,12 @@
             this.panelUAccionesR.Name = "panelUAccionesR";
             this.panelUAccionesR.Size = new System.Drawing.Size(218, 285);
             this.panelUAccionesR.TabIndex = 13;
+            this.panelUAccionesR.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUAccionesR_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.refrescar;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 221);
+            this.pictureBox3.Location = new System.Drawing.Point(18, 116);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +129,7 @@
             // pbDesactivaruser
             // 
             this.pbDesactivaruser.Image = global::CapaPresentacion.Properties.Resources.usuario_menos__1_;
-            this.pbDesactivaruser.Location = new System.Drawing.Point(18, 143);
+            this.pbDesactivaruser.Location = new System.Drawing.Point(18, 168);
             this.pbDesactivaruser.Name = "pbDesactivaruser";
             this.pbDesactivaruser.Size = new System.Drawing.Size(36, 36);
             this.pbDesactivaruser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +139,7 @@
             // pbNUSer
             // 
             this.pbNUSer.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario;
-            this.pbNUSer.Location = new System.Drawing.Point(16, 67);
+            this.pbNUSer.Location = new System.Drawing.Point(16, 61);
             this.pbNUSer.Name = "pbNUSer";
             this.pbNUSer.Size = new System.Drawing.Size(36, 36);
             this.pbNUSer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,7 +148,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(60, 221);
+            this.btnActualizar.Location = new System.Drawing.Point(62, 116);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(125, 32);
             this.btnActualizar.TabIndex = 16;
@@ -141,7 +158,7 @@
             // 
             // btnDesactivar
             // 
-            this.btnDesactivar.Location = new System.Drawing.Point(60, 143);
+            this.btnDesactivar.Location = new System.Drawing.Point(62, 168);
             this.btnDesactivar.Name = "btnDesactivar";
             this.btnDesactivar.Size = new System.Drawing.Size(125, 32);
             this.btnDesactivar.TabIndex = 15;
@@ -151,7 +168,7 @@
             // 
             // btnNuevoUser
             // 
-            this.btnNuevoUser.Location = new System.Drawing.Point(60, 67);
+            this.btnNuevoUser.Location = new System.Drawing.Point(60, 61);
             this.btnNuevoUser.Name = "btnNuevoUser";
             this.btnNuevoUser.Size = new System.Drawing.Size(125, 32);
             this.btnNuevoUser.TabIndex = 14;
@@ -163,7 +180,7 @@
             // 
             this.labelUAccionesR.AutoSize = true;
             this.labelUAccionesR.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUAccionesR.Location = new System.Drawing.Point(12, 14);
+            this.labelUAccionesR.Location = new System.Drawing.Point(25, 14);
             this.labelUAccionesR.Name = "labelUAccionesR";
             this.labelUAccionesR.Size = new System.Drawing.Size(160, 22);
             this.labelUAccionesR.TabIndex = 14;
@@ -190,16 +207,25 @@
             this.labelUsuarios.TabIndex = 11;
             this.labelUsuarios.Text = "Usuarios:";
             // 
-            // labelsub
+            // pbReactivar
             // 
-            this.labelsub.AutoSize = true;
-            this.labelsub.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelsub.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.labelsub.Location = new System.Drawing.Point(36, 55);
-            this.labelsub.Name = "labelsub";
-            this.labelsub.Size = new System.Drawing.Size(118, 15);
-            this.labelsub.TabIndex = 17;
-            this.labelsub.Text = "Gestión de Usuarios:";
+            this.pbReactivar.Image = global::CapaPresentacion.Properties.Resources.refrescar;
+            this.pbReactivar.Location = new System.Drawing.Point(18, 221);
+            this.pbReactivar.Name = "pbReactivar";
+            this.pbReactivar.Size = new System.Drawing.Size(36, 36);
+            this.pbReactivar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReactivar.TabIndex = 24;
+            this.pbReactivar.TabStop = false;
+            // 
+            // btnReactivar
+            // 
+            this.btnReactivar.Location = new System.Drawing.Point(62, 221);
+            this.btnReactivar.Name = "btnReactivar";
+            this.btnReactivar.Size = new System.Drawing.Size(125, 32);
+            this.btnReactivar.TabIndex = 23;
+            this.btnReactivar.Text = "Reactivar Usuario";
+            this.btnReactivar.UseVisualStyleBackColor = true;
+            this.btnReactivar.Click += new System.EventHandler(this.btnReactivar_Click);
             // 
             // FrmUsuarios
             // 
@@ -219,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDesactivaruser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNUSer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReactivar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +266,7 @@
         private System.Windows.Forms.Label labelBuscar;
         public System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Label labelsub;
+        private System.Windows.Forms.PictureBox pbReactivar;
+        private System.Windows.Forms.Button btnReactivar;
     }
 }

@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmReactivarUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmReactivarUser.resx">
+      <DependentUpon>FrmReactivarUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculos.resx">
       <DependentUpon>FrmVehiculos.cs</DependentUpon>
     </EmbeddedResource>

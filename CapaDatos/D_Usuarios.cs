@@ -67,6 +67,24 @@ namespace CapaDatos
             return dt;
         }
 
+        public DataTable ListarUsuariosDesactivados()
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_ListarUsuariosDesactivados", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
         public void DesactivarUsuario(int idUsuario)
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())
@@ -76,6 +94,22 @@ namespace CapaDatos
                 cmd.CommandType =CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@IdUsuario",idUsuario);
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void ReactivarUsuario(int idUsuario)
+        {
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_RestaurarUsuario", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
 
                 cn.Open();
 
@@ -96,6 +130,26 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Buscar",buscar);
 
                 SqlDataAdapter da =new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public DataTable BuscarUsuariosDesactivados(string buscar)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("SP_BuscarUsuariosDesa", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Buscar", buscar);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                 da.Fill(dt);
             }

@@ -203,5 +203,17 @@ namespace CapaPresentacion
             dgvUsuarios.ClearSelection();
             dgvUsuarios.CurrentCell = null;
         }
+
+        private void panelUAccionesR_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnReactivar_Click(object sender, EventArgs e)
+        {
+            FrmReactivarUser Ruser = new FrmReactivarUser();
+            Ruser.ShowDialog();
+            ListarUsuarios();
+        }
     }
 }
