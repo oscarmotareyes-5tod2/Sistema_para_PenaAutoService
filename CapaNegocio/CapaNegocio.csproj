@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="N_Configuracion.cs" />
+    <Compile Include="N_Ingresos.cs" />
     <Compile Include="N_OrdenesTrabajo.cs" />
     <Compile Include="N_Roles.cs" />
     <Compile Include="N_Usuarios.cs" />

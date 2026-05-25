@@ -33,6 +33,8 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.panelUAccionesR = new System.Windows.Forms.Panel();
+            this.pbReactivar = new System.Windows.Forms.PictureBox();
+            this.btnReactivar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbDesactivaruser = new System.Windows.Forms.PictureBox();
             this.pbNUSer = new System.Windows.Forms.PictureBox();
@@ -42,15 +44,13 @@
             this.labelUAccionesR = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.labelUsuarios = new System.Windows.Forms.Label();
-            this.pbReactivar = new System.Windows.Forms.PictureBox();
-            this.btnReactivar = new System.Windows.Forms.Button();
             this.panelUsuarios.SuspendLayout();
             this.panelUAccionesR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReactivar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDesactivaruser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNUSer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReactivar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUsuarios
@@ -115,6 +115,26 @@
             this.panelUAccionesR.Size = new System.Drawing.Size(218, 285);
             this.panelUAccionesR.TabIndex = 13;
             this.panelUAccionesR.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUAccionesR_Paint);
+            // 
+            // pbReactivar
+            // 
+            this.pbReactivar.Image = global::CapaPresentacion.Properties.Resources.refrescar;
+            this.pbReactivar.Location = new System.Drawing.Point(18, 221);
+            this.pbReactivar.Name = "pbReactivar";
+            this.pbReactivar.Size = new System.Drawing.Size(36, 36);
+            this.pbReactivar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReactivar.TabIndex = 24;
+            this.pbReactivar.TabStop = false;
+            // 
+            // btnReactivar
+            // 
+            this.btnReactivar.Location = new System.Drawing.Point(62, 221);
+            this.btnReactivar.Name = "btnReactivar";
+            this.btnReactivar.Size = new System.Drawing.Size(125, 32);
+            this.btnReactivar.TabIndex = 23;
+            this.btnReactivar.Text = "Reactivar Usuario";
+            this.btnReactivar.UseVisualStyleBackColor = true;
+            this.btnReactivar.Click += new System.EventHandler(this.btnReactivar_Click);
             // 
             // pictureBox3
             // 
@@ -188,11 +208,13 @@
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(57, 140);
+            this.dgvUsuarios.Location = new System.Drawing.Point(30, 140);
             this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(341, 285);
+            this.dgvUsuarios.Size = new System.Drawing.Size(430, 285);
             this.dgvUsuarios.TabIndex = 12;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
@@ -206,26 +228,6 @@
             this.labelUsuarios.Size = new System.Drawing.Size(94, 24);
             this.labelUsuarios.TabIndex = 11;
             this.labelUsuarios.Text = "Usuarios:";
-            // 
-            // pbReactivar
-            // 
-            this.pbReactivar.Image = global::CapaPresentacion.Properties.Resources.refrescar;
-            this.pbReactivar.Location = new System.Drawing.Point(18, 221);
-            this.pbReactivar.Name = "pbReactivar";
-            this.pbReactivar.Size = new System.Drawing.Size(36, 36);
-            this.pbReactivar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbReactivar.TabIndex = 24;
-            this.pbReactivar.TabStop = false;
-            // 
-            // btnReactivar
-            // 
-            this.btnReactivar.Location = new System.Drawing.Point(62, 221);
-            this.btnReactivar.Name = "btnReactivar";
-            this.btnReactivar.Size = new System.Drawing.Size(125, 32);
-            this.btnReactivar.TabIndex = 23;
-            this.btnReactivar.Text = "Reactivar Usuario";
-            this.btnReactivar.UseVisualStyleBackColor = true;
-            this.btnReactivar.Click += new System.EventHandler(this.btnReactivar_Click);
             // 
             // FrmUsuarios
             // 
@@ -241,11 +243,11 @@
             this.panelUsuarios.PerformLayout();
             this.panelUAccionesR.ResumeLayout(false);
             this.panelUAccionesR.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReactivar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDesactivaruser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNUSer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReactivar)).EndInit();
             this.ResumeLayout(false);
 
         }

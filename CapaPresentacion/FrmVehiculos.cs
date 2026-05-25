@@ -226,5 +226,25 @@ namespace CapaPresentacion
             // RECARGAR GRID
             CargarVehiculos();
         }
+        
+        FormPrincipal frm = new FormPrincipal();
+        private void AbrirFormulario(Form formulario)
+        {
+            frm.PanelContenedor.Controls.Clear();
+
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+
+            frm.PanelContenedor.Controls.Add(formulario);
+            frm.PanelContenedor.Tag = formulario;
+
+            formulario.Show();
+        }
+        private void btnNIngreso_Click(object sender, EventArgs e)
+        {
+            FrmNuevoIngreso nuevoIngreso = new FrmNuevoIngreso();
+            nuevoIngreso.ShowDialog();
+        }
     }
 }

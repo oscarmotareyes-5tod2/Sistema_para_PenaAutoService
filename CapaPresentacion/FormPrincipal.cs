@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,25 @@ namespace CapaPresentacion
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            N_Configuracion negocio = new N_Configuracion();
 
+            DataTable dt =negocio.ObtenerConfiguracion();
+
+            if (dt.Rows.Count > 0)
+            {
+                string tema =dt.Rows[0]["Tema"].ToString();
+
+                string color =dt.Rows[0]["ColorPrincipal"].ToString();
+
+                Color colorPrincipal =ThemeManager.ObtenerColorPrincipal(color);
+
+                if (tema == "Oscuro")
+                {
+                    ThemeManager.AplicarTemaOscuro(
+                        this,
+                        colorPrincipal);
+                }
+            }
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -60,7 +79,8 @@ namespace CapaPresentacion
 
         private void btnIngresos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario(new FrmIngreso());
+            LTitulo.Text = "Gestión de Ingresos en el Taller";
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -73,6 +93,12 @@ namespace CapaPresentacion
         {
             AbrirFormulario(new FrmVehiculos());
             LTitulo.Text = "Gestión de Vehículos en el Taller";
+        }
+
+        private void pbConfiguracion_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConfiguracion());
+            LTitulo.Text = "Configuración del Sistema";
         }
     }
 }

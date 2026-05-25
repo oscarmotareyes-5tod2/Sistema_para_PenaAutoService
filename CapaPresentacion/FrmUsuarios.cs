@@ -121,21 +121,29 @@ namespace CapaPresentacion
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dgvUsuarios.Rows.Count == 0) 
-            { MessageBox.Show("Seleccione un usuario");
-                return; }
+            if (dgvUsuarios.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione un usuario");
+                return;
+            } 
+            
 
-            FrmNuevouser frm = new FrmNuevouser();
-            frm.idUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
+            else
+            {
+                FrmNuevouser frm = new FrmNuevouser();
+                frm.idUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["IdUsuario"].Value);
 
-            frm.txtUsuario.Text = dgvUsuarios.CurrentRow.Cells["Usuario"].Value.ToString(); 
-            
-            frm.txtClave.Text = dgvUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString(); 
-            
-            frm.cmbRol.SelectedText = dgvUsuarios.CurrentRow.Cells["Rol"].Value.ToString(); 
-            
-            frm.esEditar = true; frm.ShowDialog(); 
-            ListarUsuarios();
+                frm.txtUsuario.Text = dgvUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
+
+                frm.txtNombre.Text = dgvUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
+
+                frm.txtClave.Text = dgvUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
+
+                frm.cmbRol.SelectedText = dgvUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
+
+                frm.esEditar = true; frm.ShowDialog();
+                ListarUsuarios();
+            }
         }
 
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

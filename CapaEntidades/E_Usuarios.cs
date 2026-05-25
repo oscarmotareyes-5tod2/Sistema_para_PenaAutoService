@@ -10,6 +10,8 @@ namespace CapaEntidades
     {
         public int IdUsuario { get; set; }
 
+        public string Nombre { get; set; }
+
         public string Username { get; set; }
 
         public string PasswordHash { get; set; }

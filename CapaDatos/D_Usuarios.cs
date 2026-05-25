@@ -22,6 +22,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Username", usuario.Username);
                 cmd.Parameters.AddWithValue("@PasswordHash", usuario.PasswordHash);
                 cmd.Parameters.AddWithValue("@IdRol",usuario.IdRol);
+                cmd.Parameters.AddWithValue("@Nombre", usuario.Nombre);
 
                 cn.Open();
 
@@ -172,6 +173,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@PasswordHash",usuario.PasswordHash);
 
                 cmd.Parameters.AddWithValue("@IdRol",usuario.IdRol);
+                cmd.Parameters.AddWithValue("@Nombre", usuario.Nombre);
 
                 cn.Open();
 

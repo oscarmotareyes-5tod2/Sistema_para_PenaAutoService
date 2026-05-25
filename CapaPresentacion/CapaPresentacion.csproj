@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfiguracion.Designer.cs">
+      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoIngreso.Designer.cs">
+      <DependentUpon>FrmNuevoIngreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReactivarUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeManager.cs" />
+    <EmbeddedResource Include="FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngreso.resx">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoIngreso.resx">
+      <DependentUpon>FrmNuevoIngreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReactivarUser.resx">
       <DependentUpon>FrmReactivarUser.cs</DependentUpon>
     </EmbeddedResource>

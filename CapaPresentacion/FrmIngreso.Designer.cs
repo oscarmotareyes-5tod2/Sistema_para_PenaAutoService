@@ -28,12 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvIngresos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngresos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvIngresos
+            // 
+            this.dgvIngresos.AllowUserToAddRows = false;
+            this.dgvIngresos.AllowUserToDeleteRows = false;
+            this.dgvIngresos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIngresos.Location = new System.Drawing.Point(81, 54);
+            this.dgvIngresos.Name = "dgvIngresos";
+            this.dgvIngresos.Size = new System.Drawing.Size(944, 409);
+            this.dgvIngresos.TabIndex = 0;
+            this.dgvIngresos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngresos_CellContentClick);
+            // 
+            // FrmIngreso
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmIngreso";
+            this.ClientSize = new System.Drawing.Size(1104, 729);
+            this.Controls.Add(this.dgvIngresos);
+            this.Name = "FrmIngreso";
+            this.Load += new System.EventHandler(this.FrmIngreso_Load);
+            this.Click += new System.EventHandler(this.FrmIngreso_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngresos)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvIngresos;
     }
 }

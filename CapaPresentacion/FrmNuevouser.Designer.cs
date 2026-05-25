@@ -36,10 +36,12 @@
             this.labelrol = new System.Windows.Forms.Label();
             this.labelContra = new System.Windows.Forms.Label();
             this.panelNuser = new System.Windows.Forms.Panel();
-            this.labelNUSer = new System.Windows.Forms.Label();
             this.pictureBoxNuser = new System.Windows.Forms.PictureBox();
+            this.labelNUSer = new System.Windows.Forms.Label();
             this.paneldatos = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panelNuser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuser)).BeginInit();
             this.paneldatos.SuspendLayout();
@@ -49,7 +51,7 @@
             // 
             this.lNombreu.AutoSize = true;
             this.lNombreu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreu.Location = new System.Drawing.Point(56, 13);
+            this.lNombreu.Location = new System.Drawing.Point(56, 105);
             this.lNombreu.Name = "lNombreu";
             this.lNombreu.Size = new System.Drawing.Size(97, 22);
             this.lNombreu.TabIndex = 0;
@@ -67,7 +69,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(15, 55);
+            this.txtUsuario.Location = new System.Drawing.Point(15, 147);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(176, 20);
             this.txtUsuario.TabIndex = 2;
@@ -75,14 +77,14 @@
             // cmbRol
             // 
             this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(47, 227);
+            this.cmbRol.Location = new System.Drawing.Point(47, 319);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(111, 21);
             this.cmbRol.TabIndex = 3;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(15, 148);
+            this.txtClave.Location = new System.Drawing.Point(15, 240);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(176, 20);
             this.txtClave.TabIndex = 6;
@@ -91,7 +93,7 @@
             // 
             this.labelrol.AutoSize = true;
             this.labelrol.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelrol.Location = new System.Drawing.Point(88, 192);
+            this.labelrol.Location = new System.Drawing.Point(88, 284);
             this.labelrol.Name = "labelrol";
             this.labelrol.Size = new System.Drawing.Size(44, 22);
             this.labelrol.TabIndex = 8;
@@ -101,7 +103,7 @@
             // 
             this.labelContra.AutoSize = true;
             this.labelContra.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContra.Location = new System.Drawing.Point(63, 105);
+            this.labelContra.Location = new System.Drawing.Point(63, 197);
             this.labelContra.Name = "labelContra";
             this.labelContra.Size = new System.Drawing.Size(95, 22);
             this.labelContra.TabIndex = 7;
@@ -120,6 +122,16 @@
             this.panelNuser.Size = new System.Drawing.Size(503, 104);
             this.panelNuser.TabIndex = 0;
             // 
+            // pictureBoxNuser
+            // 
+            this.pictureBoxNuser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__1_;
+            this.pictureBoxNuser.Location = new System.Drawing.Point(141, 25);
+            this.pictureBoxNuser.Name = "pictureBoxNuser";
+            this.pictureBoxNuser.Size = new System.Drawing.Size(41, 34);
+            this.pictureBoxNuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxNuser.TabIndex = 1;
+            this.pictureBoxNuser.TabStop = false;
+            // 
             // labelNUSer
             // 
             this.labelNUSer.AutoSize = true;
@@ -131,19 +143,11 @@
             this.labelNUSer.TabIndex = 0;
             this.labelNUSer.Text = "Nuevo Usuario";
             // 
-            // pictureBoxNuser
-            // 
-            this.pictureBoxNuser.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__1_;
-            this.pictureBoxNuser.Location = new System.Drawing.Point(141, 25);
-            this.pictureBoxNuser.Name = "pictureBoxNuser";
-            this.pictureBoxNuser.Size = new System.Drawing.Size(41, 34);
-            this.pictureBoxNuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxNuser.TabIndex = 1;
-            this.pictureBoxNuser.TabStop = false;
-            // 
             // paneldatos
             // 
             this.paneldatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneldatos.Controls.Add(this.labelNombre);
+            this.paneldatos.Controls.Add(this.txtNombre);
             this.paneldatos.Controls.Add(this.lNombreu);
             this.paneldatos.Controls.Add(this.cmbRol);
             this.paneldatos.Controls.Add(this.labelrol);
@@ -152,7 +156,7 @@
             this.paneldatos.Controls.Add(this.txtUsuario);
             this.paneldatos.Location = new System.Drawing.Point(94, 131);
             this.paneldatos.Name = "paneldatos";
-            this.paneldatos.Size = new System.Drawing.Size(216, 266);
+            this.paneldatos.Size = new System.Drawing.Size(216, 370);
             this.paneldatos.TabIndex = 9;
             // 
             // btnCancel
@@ -165,11 +169,28 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Location = new System.Drawing.Point(61, 15);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(81, 22);
+            this.labelNombre.TabIndex = 9;
+            this.labelNombre.Text = "Nombre:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(20, 57);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(176, 20);
+            this.txtNombre.TabIndex = 10;
+            // 
             // FrmNuevouser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 423);
+            this.ClientSize = new System.Drawing.Size(503, 513);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.paneldatos);
             this.Controls.Add(this.panelNuser);
@@ -202,5 +223,7 @@
         public System.Windows.Forms.TextBox txtClave;
         public System.Windows.Forms.Label labelNUSer;
         public System.Windows.Forms.PictureBox pictureBoxNuser;
+        private System.Windows.Forms.Label labelNombre;
+        public System.Windows.Forms.TextBox txtNombre;
     }
 }

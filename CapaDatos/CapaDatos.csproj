@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="D_Configuracion.cs" />
+    <Compile Include="D_Ingresos.cs" />
     <Compile Include="D_OrdenesTrabajo.cs" />
     <Compile Include="D_Roles.cs" />
     <Compile Include="D_Usuarios.cs" />

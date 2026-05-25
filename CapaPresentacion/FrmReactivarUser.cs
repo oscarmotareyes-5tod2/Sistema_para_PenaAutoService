@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace CapaPresentacion
 {
@@ -51,13 +53,13 @@ namespace CapaPresentacion
             this.panelRuser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRuser.Location = new System.Drawing.Point(0, 0);
             this.panelRuser.Name = "panelRuser";
-            this.panelRuser.Size = new System.Drawing.Size(578, 104);
+            this.panelRuser.Size = new System.Drawing.Size(652, 104);
             this.panelRuser.TabIndex = 1;
             // 
             // pictureBoxRuser
             // 
             this.pictureBoxRuser.Image = global::CapaPresentacion.Properties.Resources.refrescar__1_;
-            this.pictureBoxRuser.Location = new System.Drawing.Point(141, 25);
+            this.pictureBoxRuser.Location = new System.Drawing.Point(188, 29);
             this.pictureBoxRuser.Name = "pictureBoxRuser";
             this.pictureBoxRuser.Size = new System.Drawing.Size(41, 34);
             this.pictureBoxRuser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,7 +71,7 @@ namespace CapaPresentacion
             this.labelRUSer.AutoSize = true;
             this.labelRUSer.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRUSer.ForeColor = System.Drawing.Color.White;
-            this.labelRUSer.Location = new System.Drawing.Point(188, 35);
+            this.labelRUSer.Location = new System.Drawing.Point(235, 39);
             this.labelRUSer.Name = "labelRUSer";
             this.labelRUSer.Size = new System.Drawing.Size(172, 24);
             this.labelRUSer.TabIndex = 0;
@@ -80,12 +82,12 @@ namespace CapaPresentacion
             this.dgvRuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRuser.Location = new System.Drawing.Point(34, 182);
             this.dgvRuser.Name = "dgvRuser";
-            this.dgvRuser.Size = new System.Drawing.Size(341, 285);
+            this.dgvRuser.Size = new System.Drawing.Size(430, 285);
             this.dgvRuser.TabIndex = 2;
             // 
             // btnReactivar
             // 
-            this.btnReactivar.Location = new System.Drawing.Point(420, 265);
+            this.btnReactivar.Location = new System.Drawing.Point(491, 259);
             this.btnReactivar.Name = "btnReactivar";
             this.btnReactivar.Size = new System.Drawing.Size(118, 34);
             this.btnReactivar.TabIndex = 3;
@@ -95,7 +97,7 @@ namespace CapaPresentacion
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(420, 320);
+            this.btnCancelar.Location = new System.Drawing.Point(491, 314);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 34);
             this.btnCancelar.TabIndex = 4;
@@ -123,7 +125,7 @@ namespace CapaPresentacion
             // 
             // FrmReactivarUser
             // 
-            this.ClientSize = new System.Drawing.Size(578, 479);
+            this.ClientSize = new System.Drawing.Size(652, 479);
             this.Controls.Add(this.txtRBuscar);
             this.Controls.Add(this.labelRBuscar);
             this.Controls.Add(this.btnCancelar);
@@ -218,7 +220,30 @@ namespace CapaPresentacion
         {
             this.Close();
         }
-       
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= 0x00020000;
+                return cp;
+            }
+        }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
+
+
 
         private void btnReactivar_Click(object sender, EventArgs e)
         {
@@ -264,6 +289,11 @@ namespace CapaPresentacion
             dgvRuser.ClearSelection();
             dgvRuser.CurrentCell = null;
             EstiloDataGridView();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+
+            Region = System.Drawing.Region.FromHrgn(
+                CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void FrmReactivarUser_Click(object sender, EventArgs e)

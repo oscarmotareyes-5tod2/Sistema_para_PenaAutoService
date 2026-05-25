@@ -1,14 +1,15 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaEntidades;
-using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -20,11 +21,34 @@ namespace CapaPresentacion
         }
         N_Usuarios negocio =new N_Usuarios();
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= 0x00020000;
+                return cp;
+            }
+        }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
         private void FrmNuevouser_Load(object sender, EventArgs e)
         {
             CargarRoles();
-            
-            
+
+            this.FormBorderStyle = FormBorderStyle.None;
+
+            Region = System.Drawing.Region.FromHrgn(
+                CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
 
             if (esEditar)
             {
@@ -75,6 +99,7 @@ namespace CapaPresentacion
             {
                 if (txtUsuario.Text.Trim() == "" &&
                     txtClave.Text.Trim() == "" &&
+                    txtNombre.Text.Trim() == "" &&
                     cmbRol.SelectedIndex == -1)
                 {
                     MessageBox.Show(
@@ -121,6 +146,8 @@ namespace CapaPresentacion
                     return;
                 }
 
+
+
                 // LONGITUD USUARIO
                 if (txtUsuario.Text.Length < 4)
                 {
@@ -150,21 +177,17 @@ namespace CapaPresentacion
                 }
 
                 // CREAR OBJETO
-                E_Usuarios usuario =
-                    new E_Usuarios();
+                E_Usuarios usuario =new E_Usuarios();
 
-                usuario.Username =
-                    txtUsuario.Text.Trim();
+                usuario.Username =txtUsuario.Text.Trim();
 
-                usuario.PasswordHash =
-                    txtClave.Text.Trim();
+                usuario.PasswordHash =txtClave.Text.Trim();
 
-                usuario.IdRol =
-                    Convert.ToInt32(
-                        cmbRol.SelectedValue);
+                usuario.Nombre =txtNombre.Text.Trim();
 
-                N_Usuarios negocio =
-                    new N_Usuarios();
+                usuario.IdRol =Convert.ToInt32(cmbRol.SelectedValue);
+
+                N_Usuarios negocio =new N_Usuarios();
 
                 // VALIDAR ROL
                 if (cmbRol.SelectedIndex == -1)
@@ -236,6 +259,8 @@ namespace CapaPresentacion
                 txtUsuario.Clear();
 
                 txtClave.Clear();
+
+                txtNombre.Clear();
 
                 cmbRol.SelectedIndex = -1;
 

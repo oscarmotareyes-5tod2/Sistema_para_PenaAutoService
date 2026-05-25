@@ -31,49 +31,49 @@
             this.panelListos = new System.Windows.Forms.Panel();
             this.labelNListos = new System.Windows.Forms.Label();
             this.labelListos = new System.Windows.Forms.Label();
+            this.pictureBoxListos = new System.Windows.Forms.PictureBox();
             this.panelReparacion = new System.Windows.Forms.Panel();
             this.labelNReparacion = new System.Windows.Forms.Label();
             this.labelReparacion = new System.Windows.Forms.Label();
+            this.pictureBoxReparacion = new System.Windows.Forms.PictureBox();
             this.panelRevision = new System.Windows.Forms.Panel();
             this.labelNRevision = new System.Windows.Forms.Label();
             this.labelRevision = new System.Windows.Forms.Label();
+            this.pictureBoxRevision = new System.Windows.Forms.PictureBox();
             this.panelRecibidos = new System.Windows.Forms.Panel();
             this.labelNRecibidos = new System.Windows.Forms.Label();
             this.labelRecibidos = new System.Windows.Forms.Label();
+            this.pictureBoxRecibidos = new System.Windows.Forms.PictureBox();
             this.panelTodos = new System.Windows.Forms.Panel();
             this.labelNTodos = new System.Windows.Forms.Label();
             this.labelTodos = new System.Windows.Forms.Label();
+            this.pictureBoxTodos = new System.Windows.Forms.PictureBox();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.panelAccionesRapidas = new System.Windows.Forms.Panel();
             this.labelAccionesR = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVerVehiculo = new System.Windows.Forms.Button();
             this.btnEntregar = new System.Windows.Forms.Button();
             this.btnNIngreso = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxListos = new System.Windows.Forms.PictureBox();
-            this.pictureBoxReparacion = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRevision = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRecibidos = new System.Windows.Forms.PictureBox();
-            this.pictureBoxTodos = new System.Windows.Forms.PictureBox();
             this.panelListos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxListos)).BeginInit();
             this.panelReparacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReparacion)).BeginInit();
             this.panelRevision.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRevision)).BeginInit();
             this.panelRecibidos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecibidos)).BeginInit();
             this.panelTodos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTodos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.panelAccionesRapidas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxListos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReparacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRevision)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecibidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTodos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelListos
@@ -110,6 +110,17 @@
             this.labelListos.TabIndex = 7;
             this.labelListos.Text = "Listos:";
             // 
+            // pictureBoxListos
+            // 
+            this.pictureBoxListos.Image = global::CapaPresentacion.Properties.Resources.comprobacion_de_lista;
+            this.pictureBoxListos.Location = new System.Drawing.Point(127, 8);
+            this.pictureBoxListos.Name = "pictureBoxListos";
+            this.pictureBoxListos.Size = new System.Drawing.Size(36, 36);
+            this.pictureBoxListos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxListos.TabIndex = 6;
+            this.pictureBoxListos.TabStop = false;
+            this.pictureBoxListos.Click += new System.EventHandler(this.pictureBoxListos_Click);
+            // 
             // panelReparacion
             // 
             this.panelReparacion.BackColor = System.Drawing.Color.White;
@@ -144,6 +155,17 @@
             this.labelReparacion.TabIndex = 7;
             this.labelReparacion.Text = "En Reparacion:";
             // 
+            // pictureBoxReparacion
+            // 
+            this.pictureBoxReparacion.Image = global::CapaPresentacion.Properties.Resources.llave_alt;
+            this.pictureBoxReparacion.Location = new System.Drawing.Point(127, 8);
+            this.pictureBoxReparacion.Name = "pictureBoxReparacion";
+            this.pictureBoxReparacion.Size = new System.Drawing.Size(36, 36);
+            this.pictureBoxReparacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxReparacion.TabIndex = 6;
+            this.pictureBoxReparacion.TabStop = false;
+            this.pictureBoxReparacion.Click += new System.EventHandler(this.pictureBoxReparacion_Click);
+            // 
             // panelRevision
             // 
             this.panelRevision.BackColor = System.Drawing.Color.White;
@@ -177,6 +199,17 @@
             this.labelRevision.Size = new System.Drawing.Size(73, 15);
             this.labelRevision.TabIndex = 6;
             this.labelRevision.Text = "En Revision:";
+            // 
+            // pictureBoxRevision
+            // 
+            this.pictureBoxRevision.Image = global::CapaPresentacion.Properties.Resources.busqueda;
+            this.pictureBoxRevision.Location = new System.Drawing.Point(127, 8);
+            this.pictureBoxRevision.Name = "pictureBoxRevision";
+            this.pictureBoxRevision.Size = new System.Drawing.Size(36, 36);
+            this.pictureBoxRevision.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxRevision.TabIndex = 6;
+            this.pictureBoxRevision.TabStop = false;
+            this.pictureBoxRevision.Click += new System.EventHandler(this.pictureBoxRevision_Click);
             // 
             // panelRecibidos
             // 
@@ -213,6 +246,17 @@
             this.labelRecibidos.TabIndex = 5;
             this.labelRecibidos.Text = "Recibidos:";
             // 
+            // pictureBoxRecibidos
+            // 
+            this.pictureBoxRecibidos.Image = global::CapaPresentacion.Properties.Resources.bandeja_de_entrada;
+            this.pictureBoxRecibidos.Location = new System.Drawing.Point(127, 8);
+            this.pictureBoxRecibidos.Name = "pictureBoxRecibidos";
+            this.pictureBoxRecibidos.Size = new System.Drawing.Size(36, 36);
+            this.pictureBoxRecibidos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxRecibidos.TabIndex = 5;
+            this.pictureBoxRecibidos.TabStop = false;
+            this.pictureBoxRecibidos.Click += new System.EventHandler(this.pictureBoxRecibidos_Click);
+            // 
             // panelTodos
             // 
             this.panelTodos.BackColor = System.Drawing.Color.White;
@@ -247,8 +291,20 @@
             this.labelTodos.TabIndex = 4;
             this.labelTodos.Text = "Todos los Vehiculos:";
             // 
+            // pictureBoxTodos
+            // 
+            this.pictureBoxTodos.Image = global::CapaPresentacion.Properties.Resources.coche;
+            this.pictureBoxTodos.Location = new System.Drawing.Point(127, 8);
+            this.pictureBoxTodos.Name = "pictureBoxTodos";
+            this.pictureBoxTodos.Size = new System.Drawing.Size(36, 36);
+            this.pictureBoxTodos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxTodos.TabIndex = 4;
+            this.pictureBoxTodos.TabStop = false;
+            this.pictureBoxTodos.Click += new System.EventHandler(this.pictureBoxTodos_Click);
+            // 
             // dgvVehiculos
             // 
+            this.dgvVehiculos.AllowUserToAddRows = false;
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehiculos.Location = new System.Drawing.Point(131, 238);
             this.dgvVehiculos.Name = "dgvVehiculos";
@@ -283,52 +339,6 @@
             this.labelAccionesR.TabIndex = 10;
             this.labelAccionesR.Text = "Acciones Rapidas";
             // 
-            // btnVerVehiculo
-            // 
-            this.btnVerVehiculo.Location = new System.Drawing.Point(68, 201);
-            this.btnVerVehiculo.Name = "btnVerVehiculo";
-            this.btnVerVehiculo.Size = new System.Drawing.Size(129, 40);
-            this.btnVerVehiculo.TabIndex = 18;
-            this.btnVerVehiculo.Text = "Reporte";
-            this.btnVerVehiculo.UseVisualStyleBackColor = true;
-            // 
-            // btnEntregar
-            // 
-            this.btnEntregar.Location = new System.Drawing.Point(68, 130);
-            this.btnEntregar.Name = "btnEntregar";
-            this.btnEntregar.Size = new System.Drawing.Size(129, 40);
-            this.btnEntregar.TabIndex = 17;
-            this.btnEntregar.Text = "Entregar";
-            this.btnEntregar.UseVisualStyleBackColor = true;
-            this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
-            // 
-            // btnNIngreso
-            // 
-            this.btnNIngreso.Location = new System.Drawing.Point(68, 68);
-            this.btnNIngreso.Name = "btnNIngreso";
-            this.btnNIngreso.Size = new System.Drawing.Size(129, 40);
-            this.btnNIngreso.TabIndex = 16;
-            this.btnNIngreso.Text = "Nuevo Ingreso";
-            this.btnNIngreso.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(304, 201);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(189, 20);
-            this.txtBuscar.TabIndex = 17;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // labelBuscar
-            // 
-            this.labelBuscar.AutoSize = true;
-            this.labelBuscar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBuscar.Location = new System.Drawing.Point(189, 203);
-            this.labelBuscar.Name = "labelBuscar";
-            this.labelBuscar.Size = new System.Drawing.Size(102, 15);
-            this.labelBuscar.TabIndex = 18;
-            this.labelBuscar.Text = "Buscar Vehiculo:";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.agregar_documento;
@@ -359,65 +369,59 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBoxListos
+            // btnVerVehiculo
             // 
-            this.pictureBoxListos.Image = global::CapaPresentacion.Properties.Resources.comprobacion_de_lista;
-            this.pictureBoxListos.Location = new System.Drawing.Point(127, 8);
-            this.pictureBoxListos.Name = "pictureBoxListos";
-            this.pictureBoxListos.Size = new System.Drawing.Size(36, 36);
-            this.pictureBoxListos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxListos.TabIndex = 6;
-            this.pictureBoxListos.TabStop = false;
-            this.pictureBoxListos.Click += new System.EventHandler(this.pictureBoxListos_Click);
+            this.btnVerVehiculo.Location = new System.Drawing.Point(68, 201);
+            this.btnVerVehiculo.Name = "btnVerVehiculo";
+            this.btnVerVehiculo.Size = new System.Drawing.Size(129, 40);
+            this.btnVerVehiculo.TabIndex = 18;
+            this.btnVerVehiculo.Text = "Reporte";
+            this.btnVerVehiculo.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxReparacion
+            // btnEntregar
             // 
-            this.pictureBoxReparacion.Image = global::CapaPresentacion.Properties.Resources.llave_alt;
-            this.pictureBoxReparacion.Location = new System.Drawing.Point(127, 8);
-            this.pictureBoxReparacion.Name = "pictureBoxReparacion";
-            this.pictureBoxReparacion.Size = new System.Drawing.Size(36, 36);
-            this.pictureBoxReparacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxReparacion.TabIndex = 6;
-            this.pictureBoxReparacion.TabStop = false;
-            this.pictureBoxReparacion.Click += new System.EventHandler(this.pictureBoxReparacion_Click);
+            this.btnEntregar.Location = new System.Drawing.Point(68, 130);
+            this.btnEntregar.Name = "btnEntregar";
+            this.btnEntregar.Size = new System.Drawing.Size(129, 40);
+            this.btnEntregar.TabIndex = 17;
+            this.btnEntregar.Text = "Entregar";
+            this.btnEntregar.UseVisualStyleBackColor = true;
+            this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
             // 
-            // pictureBoxRevision
+            // btnNIngreso
             // 
-            this.pictureBoxRevision.Image = global::CapaPresentacion.Properties.Resources.busqueda;
-            this.pictureBoxRevision.Location = new System.Drawing.Point(127, 8);
-            this.pictureBoxRevision.Name = "pictureBoxRevision";
-            this.pictureBoxRevision.Size = new System.Drawing.Size(36, 36);
-            this.pictureBoxRevision.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxRevision.TabIndex = 6;
-            this.pictureBoxRevision.TabStop = false;
-            this.pictureBoxRevision.Click += new System.EventHandler(this.pictureBoxRevision_Click);
+            this.btnNIngreso.Location = new System.Drawing.Point(68, 68);
+            this.btnNIngreso.Name = "btnNIngreso";
+            this.btnNIngreso.Size = new System.Drawing.Size(129, 40);
+            this.btnNIngreso.TabIndex = 16;
+            this.btnNIngreso.Text = "Nuevo Ingreso";
+            this.btnNIngreso.UseVisualStyleBackColor = true;
+            this.btnNIngreso.Click += new System.EventHandler(this.btnNIngreso_Click);
             // 
-            // pictureBoxRecibidos
+            // txtBuscar
             // 
-            this.pictureBoxRecibidos.Image = global::CapaPresentacion.Properties.Resources.bandeja_de_entrada;
-            this.pictureBoxRecibidos.Location = new System.Drawing.Point(127, 8);
-            this.pictureBoxRecibidos.Name = "pictureBoxRecibidos";
-            this.pictureBoxRecibidos.Size = new System.Drawing.Size(36, 36);
-            this.pictureBoxRecibidos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxRecibidos.TabIndex = 5;
-            this.pictureBoxRecibidos.TabStop = false;
-            this.pictureBoxRecibidos.Click += new System.EventHandler(this.pictureBoxRecibidos_Click);
+            this.txtBuscar.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtBuscar.Location = new System.Drawing.Point(304, 201);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(189, 20);
+            this.txtBuscar.TabIndex = 17;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // pictureBoxTodos
+            // labelBuscar
             // 
-            this.pictureBoxTodos.Image = global::CapaPresentacion.Properties.Resources.coche;
-            this.pictureBoxTodos.Location = new System.Drawing.Point(127, 8);
-            this.pictureBoxTodos.Name = "pictureBoxTodos";
-            this.pictureBoxTodos.Size = new System.Drawing.Size(36, 36);
-            this.pictureBoxTodos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxTodos.TabIndex = 4;
-            this.pictureBoxTodos.TabStop = false;
-            this.pictureBoxTodos.Click += new System.EventHandler(this.pictureBoxTodos_Click);
+            this.labelBuscar.AutoSize = true;
+            this.labelBuscar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBuscar.Location = new System.Drawing.Point(189, 203);
+            this.labelBuscar.Name = "labelBuscar";
+            this.labelBuscar.Size = new System.Drawing.Size(102, 15);
+            this.labelBuscar.TabIndex = 18;
+            this.labelBuscar.Text = "Buscar Vehiculo:";
             // 
             // FrmVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1104, 729);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.labelBuscar);
@@ -434,25 +438,25 @@
             this.Click += new System.EventHandler(this.Form2Principal_Click);
             this.panelListos.ResumeLayout(false);
             this.panelListos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxListos)).EndInit();
             this.panelReparacion.ResumeLayout(false);
             this.panelReparacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReparacion)).EndInit();
             this.panelRevision.ResumeLayout(false);
             this.panelRevision.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRevision)).EndInit();
             this.panelRecibidos.ResumeLayout(false);
             this.panelRecibidos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecibidos)).EndInit();
             this.panelTodos.ResumeLayout(false);
             this.panelTodos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTodos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             this.panelAccionesRapidas.ResumeLayout(false);
             this.panelAccionesRapidas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxListos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxReparacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRevision)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecibidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTodos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
