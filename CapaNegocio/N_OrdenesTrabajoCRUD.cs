@@ -1,4 +1,4 @@
-﻿using CapaDatos;
+using CapaDatos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    public class N_OrdenesTrabajo
+    public class N_OrdenesTrabajoCRUD
     {
         D_OrdenesTrabajo datos = new D_OrdenesTrabajo();
+
         public void Insertar(string estado, int idVehiculo, int idEmpleado)
         {
             datos.Insertar(estado, idVehiculo, idEmpleado);
@@ -30,16 +31,5 @@ namespace CapaNegocio
         {
             datos.Eliminar(idOrden);
         }
-
-        public int TotalPorEstado(string estado)
-        {
-            return datos.ObtenerTotalPorEstado(estado);
-        }
-
-        public int TotalNoEntregados()
-        {
-            return datos.ObtenerTotalNoEntregados();
-        }
     }
-
 }

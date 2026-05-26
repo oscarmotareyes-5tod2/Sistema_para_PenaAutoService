@@ -15,12 +15,13 @@ namespace CapaDatos
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())
             {
-                SqlCommand cmd =new SqlCommand("SP_InsertarUsuario",cn);
+                SqlCommand cmd =new SqlCommand("sp_InsertarUsuario",cn);
 
                 cmd.CommandType =CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Username", usuario.Username);
                 cmd.Parameters.AddWithValue("@PasswordHash", usuario.PasswordHash);
+                cmd.Parameters.AddWithValue("@Activo", usuario.Activo);
                 cmd.Parameters.AddWithValue("@IdRol",usuario.IdRol);
 
                 cn.Open();
@@ -107,7 +108,7 @@ namespace CapaDatos
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())
             {
-                SqlCommand cmd =new SqlCommand("SP_ActualizarUsuario",cn);
+                SqlCommand cmd =new SqlCommand("sp_ActualizarUsuario",cn);
 
                 cmd.CommandType =CommandType.StoredProcedure;
 
@@ -117,7 +118,24 @@ namespace CapaDatos
 
                 cmd.Parameters.AddWithValue("@PasswordHash",usuario.PasswordHash);
 
+                cmd.Parameters.AddWithValue("@Activo", usuario.Activo);
                 cmd.Parameters.AddWithValue("@IdRol",usuario.IdRol);
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void EliminarUsuario(int idUsuario)
+        {
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_EliminarUsuario", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
 
                 cn.Open();
 

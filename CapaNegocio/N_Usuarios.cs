@@ -38,6 +38,11 @@ namespace CapaNegocio
             datos.ActualizarUsuario(usuario);
         }
 
+        public void EliminarUsuario(int idUsuario)
+        {
+            datos.EliminarUsuario(idUsuario);
+        }
+
         public int ExisteUsuario(string username)
         {
             return datos.ExisteUsuario(username);

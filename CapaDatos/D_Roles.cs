@@ -27,5 +27,54 @@ namespace CapaDatos
 
             return dt;
         }
+
+        public void InsertarRol(string nombreRol)
+        {
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_InsertarRol", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@NombreRol", nombreRol);
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void ActualizarRol(int idRol, string nombreRol)
+        {
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_ActualizarRol", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdRol", idRol);
+                cmd.Parameters.AddWithValue("@NombreRol", nombreRol);
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void EliminarRol(int idRol)
+        {
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_EliminarRol", cn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IdRol", idRol);
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

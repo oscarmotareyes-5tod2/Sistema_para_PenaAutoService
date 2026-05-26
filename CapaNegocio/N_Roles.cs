@@ -16,5 +16,20 @@ namespace CapaNegocio
         {
             return datos.ListarRoles();
         }
+
+        public void InsertarRol(string nombreRol)
+        {
+            datos.InsertarRol(nombreRol);
+        }
+
+        public void ActualizarRol(int idRol, string nombreRol)
+        {
+            datos.ActualizarRol(idRol, nombreRol);
+        }
+
+        public void EliminarRol(int idRol)
+        {
+            datos.EliminarRol(idRol);
+        }
     }
 }

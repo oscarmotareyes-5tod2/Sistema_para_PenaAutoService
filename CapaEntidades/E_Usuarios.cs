@@ -14,7 +14,7 @@ namespace CapaEntidades
 
         public string PasswordHash { get; set; }
 
-        public int Activo { get; set; }
+        public bool Activo { get; set; }
 
         public int IdRol { get; set; }
     }
