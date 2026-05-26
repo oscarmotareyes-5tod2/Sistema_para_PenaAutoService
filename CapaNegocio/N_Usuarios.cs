@@ -42,5 +42,15 @@ namespace CapaNegocio
         {
             return datos.ExisteUsuario(username);
         }
+
+        public E_Usuarios AutenticarUsuario(string username, string passwordHash)
+        {
+            return datos.AutenticarUsuario(username, passwordHash);
+        }
+
+        public DataTable ObtenerRolUsuario(int idRol)
+        {
+            return datos.ObtenerRolUsuario(idRol);
+        }
     }
 }

@@ -1,0 +1,207 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                      LOGIN - ACTUALIZACIÓN v2.0                            ║
+║                                                                            ║
+║                          ✅ COMPLETADO                                    ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+📋 CAMBIOS PRINCIPALES
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ 1. INTERFAZ REDISEÑADA (ROJA)
+   ├─ Panel título DarkRed en la parte superior
+   ├─ Botón cerrar "✕" en la esquina superior derecha
+   ├─ Botón INGRESAR en color DarkRed
+   └─ Consistente con FrmNuevouser y otros formularios
+
+✅ 2. BOTÓN CERRAR FUNCIONAL
+   ├─ Ubicado: Esquina superior derecha (✕)
+   ├─ Efecto: Hover cambia a amarillo
+   ├─ Funcionalidad: Cierra la aplicación
+   └─ Indicador: Cursor Hand
+
+✅ 3. CONTROL DE 3 INTENTOS FALLIDOS
+   ├─ Intento 1 fallido → "Intentos restantes: 2"
+   ├─ Intento 2 fallido → "Intentos restantes: 1"
+   ├─ Intento 3 fallido → ❌ CIERRE AUTOMÁTICO DE APP
+   └─ Contador reinicia al abrir nuevamente
+
+✅ 4. AUTENTICACIÓN MEJORADA
+   ├─ Usa sp_ListarUsuarios (tu SP existente)
+   ├─ Valida: usuario + contraseña + Activo=1
+   ├─ Lee todos los usuarios de la BD
+   └─ Más seguro que parámetros en SP
+
+
+📊 USUARIOS DE PRUEBA
+═══════════════════════════════════════════════════════════════════════════════
+
+Usuario    Contraseña  Rol              Resultado
+────────── ─────────── ──────────────── ──────────────
+admin1     123         Administrador    ✅ Acceso Total
+recep1     123         Recepcionista    ✅ Acceso Parcial
+meca1      123         Mecanico         ✅ Acceso Parcial
+
+
+🎨 INTERFAZ VISUAL
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────┐
+│ ✕ Login - Peña Auto Service                             │ ← Panel DarkRed
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│                    [LOGO]                              │
+│                                                         │
+│                                                         │
+│   Usuario:     [___________________]                   │
+│                                                         │
+│   Contraseña:  [___________________]                   │
+│                                                         │
+│                                                         │
+│     [      INGRESAR      ]                             │ ← DarkRed
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+
+
+🔄 FLUJO DE INTENTOS FALLIDOS
+═══════════════════════════════════════════════════════════════════════════════
+
+Inicio
+  ├─ intentosFallidos = 0
+  │
+  ├─ INTENTO 1: usuario/contraseña incorrectos
+  │  ├─ intentosFallidos++  (ahora = 1)
+  │  ├─ Mostrar: "Intentos restantes: 2"
+  │  └─ Limpiar campos
+  │
+  ├─ INTENTO 2: usuario/contraseña incorrectos
+  │  ├─ intentosFallidos++  (ahora = 2)
+  │  ├─ Mostrar: "Intentos restantes: 1"
+  │  └─ Limpiar campos
+  │
+  ├─ INTENTO 3: usuario/contraseña incorrectos
+  │  ├─ intentosFallidos++  (ahora = 3)
+  │  ├─ Mostrar: "Número máximo de intentos excedido (3).
+  │  │           La aplicación se cerrará."
+  │  └─ Application.Exit()  ← ❌ CIERRE AUTOMÁTICO
+
+
+🔐 VALIDACIONES IMPLEMENTADAS
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Campo usuario requerido
+✅ Campo contraseña requerido
+✅ Usuario existe en base de datos
+✅ Contraseña coincide exactamente
+✅ Usuario tiene estado Activo = 1
+✅ Máximo 3 intentos fallidos
+✅ Cierre automático al exceder intentos
+✅ Mensaje claro de intentos restantes
+
+
+📁 ARCHIVOS MODIFICADOS
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ FrmIngreso.Designer.cs
+   └─ Panel título, botón cerrar, interfaz roja
+
+✅ FrmIngreso.cs
+   └─ Lógica de intentos, botón cerrar, validaciones
+
+✅ D_Usuarios.cs
+   └─ AutenticarUsuario() usa sp_ListarUsuarios
+
+✅ AutorizacionRoles.cs
+   └─ Rol 3 es "Mecanico" (sin tilde)
+
+
+🎨 COLORES UTILIZADOS
+═══════════════════════════════════════════════════════════════════════════════
+
+Elemento              Color         Resultado
+─────────────────── ────────────── ─────────────────────
+Fondo Principal     Blanco         #FFFFFF
+Panel Título        DarkRed        (Nativo Windows)
+Botón Ingresar      DarkRed        (Nativo Windows)
+Texto Botones       Blanco         #FFFFFF
+Botón X Hover       Amarillo       #FFFF00
+Bordes Paneles      Gris           (Default)
+
+
+🚀 CÓMO PROBAR
+═══════════════════════════════════════════════════════════════════════════════
+
+1️⃣  Compilar el proyecto
+	└─ Visual Studio → F7
+
+2️⃣  Ejecutar la aplicación
+	└─ Visual Studio → F5
+
+3️⃣  Probar intentos fallidos
+	Ingresa 3 veces credenciales incorrectas:
+	└─ Intento 1: usuario/123 → Error + "Intentos: 2"
+	└─ Intento 2: usuario/456 → Error + "Intentos: 1"
+	└─ Intento 3: usuario/789 → ¡CIERRE AUTOMÁTICO!
+
+4️⃣  Probar login exitoso
+	Ingresa: admin1 / 123
+	└─ ✅ Acceso permitido
+
+5️⃣  Probar botón cerrar
+	Clic en "✕" (esquina superior derecha)
+	└─ ✅ Aplicación cierra
+
+
+✨ CARACTERÍSTICAS DESTACADAS
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 Profesional
+  └─ Interfaz consistente con el sistema
+  └─ Paleta roja como los demás formularios
+  └─ Diseño limpio y moderno
+
+🔒 Seguro
+  └─ Máximo 3 intentos
+  └─ Validación completa de credenciales
+  └─ Solo usuarios activos pueden acceder
+
+🎮 Usuario Friendly
+  └─ Mensajes claros
+  └─ Intentos restantes mostrados
+  └─ Botón cerrar visible y funcional
+
+
+📊 ESTADO ACTUAL
+═══════════════════════════════════════════════════════════════════════════════
+
+Compilación:           ✅ SIN ERRORES
+Interfaz Roja:         ✅ IMPLEMENTADA
+Botón Cerrar:          ✅ FUNCIONAL
+Control de Intentos:   ✅ IMPLEMENTADO
+Cierre Automático:     ✅ FUNCIONAL
+Base de Datos:         ✅ COMPATIBLE
+Roles:                 ✅ CONFIGURADOS
+Validaciones:          ✅ COMPLETAS
+
+ESTADO GENERAL:        🟢 LISTO PARA USAR
+
+
+🔧 PRÓXIMAS MEJORAS (OPCIONAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+[ ] Agregar BCrypt para contraseñas
+[ ] Guardar intentos en auditoría
+[ ] Bloqueo temporal después de 3 intentos
+[ ] Recuperación de contraseña
+[ ] Autenticación multi-factor
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+						✅ ACTUALIZACIÓN COMPLETADA
+
+					Versión 2.0 - Login Mejorado y Seguro
+						   Paleta Roja + Cierre + Control
+
+════════════════════════════════════════════════════════════════════════════════
+
