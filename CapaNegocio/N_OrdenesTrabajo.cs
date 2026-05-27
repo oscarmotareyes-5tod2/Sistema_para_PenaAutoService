@@ -1,4 +1,4 @@
-﻿using CapaDatos;
+using CapaDatos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,24 +11,30 @@ namespace CapaNegocio
     public class N_OrdenesTrabajo
     {
         D_OrdenesTrabajo datos = new D_OrdenesTrabajo();
-        public void Insertar(string estado, int idVehiculo, int idEmpleado)
+
+        public void InsertarOrden(string estado, int idVehiculo, int idEmpleado)
         {
-            datos.Insertar(estado, idVehiculo, idEmpleado);
+            datos.InsertarOrden(estado, idVehiculo, idEmpleado);
         }
 
-        public DataTable Listar()
+        public DataTable ListarOrdenes()
         {
-            return datos.Listar();
+            return datos.ListarOrdenes();
         }
 
-        public void Actualizar(int idOrden, string estado, int idVehiculo, int idEmpleado)
+        public void ActualizarOrden(int idOrden, string estado, int idVehiculo, int idEmpleado)
         {
-            datos.Actualizar(idOrden, estado, idVehiculo, idEmpleado);
+            datos.ActualizarOrden(idOrden, estado, idVehiculo, idEmpleado);
         }
 
-        public void Eliminar(int idOrden)
+        public void EliminarOrden(int idOrden)
         {
-            datos.Eliminar(idOrden);
+            datos.EliminarOrden(idOrden);
+        }
+
+        public int ObtenerTotalPorEstado(string estado)
+        {
+            return datos.ObtenerTotalPorEstado(estado);
         }
 
         public int TotalPorEstado(string estado)
@@ -36,10 +42,14 @@ namespace CapaNegocio
             return datos.ObtenerTotalPorEstado(estado);
         }
 
+        public int ObtenerTotalNoEntregados()
+        {
+            return datos.ObtenerTotalNoEntregados();
+        }
+
         public int TotalNoEntregados()
         {
             return datos.ObtenerTotalNoEntregados();
         }
     }
-
 }

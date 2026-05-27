@@ -1,35 +1,30 @@
 using CapaDatos;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
     public class N_Empleados
     {
-        D_Empleados datos = new D_Empleados();
+        private D_Empleados datos = new D_Empleados();
 
-        public void Insertar(string nombre, string telefono, string cargo, string especialidad)
+        public void InsertarEmpleado(string nombre, string telefono, string cargo, string especialidad)
         {
-            datos.Insertar(nombre, telefono, cargo, especialidad);
+            datos.InsertarEmpleado(nombre, telefono, cargo, especialidad);
         }
 
-        public DataTable Listar()
+        public DataTable ListarEmpleados()
         {
-            return datos.Listar();
+            return datos.ListarEmpleados();
         }
 
-        public void Actualizar(int idEmpleado, string nombre, string telefono, string cargo, string especialidad)
+        public void ActualizarEmpleado(int idEmpleado, string nombre, string telefono, string cargo, string especialidad)
         {
-            datos.Actualizar(idEmpleado, nombre, telefono, cargo, especialidad);
+            datos.ActualizarEmpleado(idEmpleado, nombre, telefono, cargo, especialidad);
         }
 
-        public void Eliminar(int idEmpleado)
+        public void EliminarEmpleado(int idEmpleado)
         {
-            datos.Eliminar(idEmpleado);
+            datos.EliminarEmpleado(idEmpleado);
         }
     }
 }

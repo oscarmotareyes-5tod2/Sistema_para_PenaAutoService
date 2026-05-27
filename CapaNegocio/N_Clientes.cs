@@ -1,35 +1,30 @@
 using CapaDatos;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
     public class N_Clientes
     {
-        D_Cliente datos = new D_Cliente();
+        private D_Cliente datos = new D_Cliente();
 
-        public void Insertar(string nombre, int telefono, string correo, string direccion)
+        public void InsertarCliente(string nombre, string telefono, string correo, string direccion)
         {
-            datos.Insertar(nombre, telefono, correo, direccion);
+            datos.InsertarCliente(nombre, telefono, correo, direccion);
         }
 
-        public DataTable Listar()
+        public DataTable ListarClientes()
         {
-            return datos.Listar();
+            return datos.ListarClientes();
         }
 
-        public void Actualizar(int idCliente, string nombre, string telefono, string correo, string direccion)
+        public void ActualizarCliente(int idCliente, string nombre, string telefono, string correo, string direccion)
         {
-            datos.Actualizar(idCliente, nombre, telefono, correo, direccion);
+            datos.ActualizarCliente(idCliente, nombre, telefono, correo, direccion);
         }
 
-        public void Eliminar(int idCliente)
+        public void EliminarCliente(int idCliente)
         {
-            datos.Eliminar(idCliente);
+            datos.EliminarCliente(idCliente);
         }
     }
 }

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
-    public class E_Roles
+    public class E_Falla
     {
-        public int IdRol { get; set; }
-        public string NombreRol { get; set; }
+        public int IdFalla { get; set; }
+
+        public string Descripcion { get; set; }
     }
 }

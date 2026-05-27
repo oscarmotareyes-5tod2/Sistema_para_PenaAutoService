@@ -1,35 +1,30 @@
 using CapaDatos;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
     public class N_Fallas
     {
-        D_Fallas datos = new D_Fallas();
+        private D_Fallas datos = new D_Fallas();
 
-        public void Insertar(string descripcion)
+        public void InsertarFalla(string descripcion)
         {
-            datos.Insertar(descripcion);
+            datos.InsertarFalla(descripcion);
         }
 
-        public DataTable Listar()
+        public DataTable ListarFallas()
         {
-            return datos.Listar();
+            return datos.ListarFallas();
         }
 
-        public void Actualizar(int idFalla, string descripcion)
+        public void ActualizarFalla(int idFalla, string descripcion)
         {
-            datos.Actualizar(idFalla, descripcion);
+            datos.ActualizarFalla(idFalla, descripcion);
         }
 
-        public void Eliminar(int idFalla)
+        public void EliminarFalla(int idFalla)
         {
-            datos.Eliminar(idFalla);
+            datos.EliminarFalla(idFalla);
         }
     }
 }

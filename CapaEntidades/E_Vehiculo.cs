@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
-    public class E_Vehiculos
+    public class E_Vehiculo
     {
         public int IdVehiculo { get; set; }
+
         public string Placa { get; set; }
+
         public string Marca { get; set; }
+
         public string Modelo { get; set; }
+
         public int Anio { get; set; }
+
         public int IdCliente { get; set; }
-        public int IdFalla { get; set; }
     }
 }

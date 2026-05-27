@@ -167,13 +167,13 @@ namespace CapaDatos
                             int idUsuario = reader.IsDBNull(reader.GetOrdinal("IdUsuario")) ? 0 : Convert.ToInt32(reader["IdUsuario"]);
                             string usernameBD = reader.IsDBNull(reader.GetOrdinal("Username")) ? "" : reader["Username"].ToString();
                             string passwordBD = reader.IsDBNull(reader.GetOrdinal("PasswordHash")) ? "" : reader["PasswordHash"].ToString();
-                            int activo = reader.IsDBNull(reader.GetOrdinal("Activo")) ? 0 : Convert.ToInt32(reader["Activo"]);
+                            bool activo = reader.IsDBNull(reader.GetOrdinal("Activo")) ? false : Convert.ToBoolean(reader["Activo"]);
                             int idRol = reader.IsDBNull(reader.GetOrdinal("IdRol")) ? 0 : Convert.ToInt32(reader["IdRol"]);
 
                             // Comparar credenciales
                             if (usernameBD.Equals(username, StringComparison.OrdinalIgnoreCase) && 
                                 passwordBD == passwordHash && 
-                                activo == 1)
+                                activo)
                             {
                                 usuario = new E_Usuarios
                                 {

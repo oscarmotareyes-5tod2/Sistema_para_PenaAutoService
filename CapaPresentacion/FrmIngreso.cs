@@ -55,7 +55,7 @@ namespace CapaPresentacion
                 if (usuarioAutenticado != null && usuarioAutenticado.IdUsuario > 0)
                 {
                     // Verificar si el usuario está activo
-                    if (usuarioAutenticado.Activo == 0)
+                    if (!usuarioAutenticado.Activo)
                     {
                         MessageBox.Show("Este usuario se encuentra inactivo. Comuníquese con el administrador.", 
                             "Usuario Inactivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
