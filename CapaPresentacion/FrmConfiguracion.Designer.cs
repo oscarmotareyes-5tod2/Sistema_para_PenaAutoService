@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.panelConfigu = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.labelTitulo = new System.Windows.Forms.Label();
-            this.panelEncabezado = new System.Windows.Forms.Panel();
-            this.labelTema = new System.Windows.Forms.Label();
-            this.labelColor = new System.Windows.Forms.Label();
-            this.cmbTema = new System.Windows.Forms.ComboBox();
-            this.cmbColor = new System.Windows.Forms.ComboBox();
-            this.labelBackup = new System.Windows.Forms.Label();
-            this.txtRutaBackup = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnExaminar = new System.Windows.Forms.Button();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.btnCrearBackup = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pbCBackup = new System.Windows.Forms.PictureBox();
-            this.pbApariencia = new System.Windows.Forms.PictureBox();
-            this.pbRestaurarBackup = new System.Windows.Forms.PictureBox();
-            this.txtRutaRestore = new System.Windows.Forms.TextBox();
-            this.btnExaminar2 = new System.Windows.Forms.Button();
-            this.btnRestaurar = new System.Windows.Forms.Button();
             this.labelRestaurar = new System.Windows.Forms.Label();
+            this.btnRestaurar = new System.Windows.Forms.Button();
+            this.btnExaminar2 = new System.Windows.Forms.Button();
+            this.txtRutaRestore = new System.Windows.Forms.TextBox();
+            this.pbRestaurarBackup = new System.Windows.Forms.PictureBox();
+            this.pbApariencia = new System.Windows.Forms.PictureBox();
+            this.pbCBackup = new System.Windows.Forms.PictureBox();
+            this.btnCrearBackup = new System.Windows.Forms.Button();
+            this.btnExaminar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtRutaBackup = new System.Windows.Forms.TextBox();
+            this.labelBackup = new System.Windows.Forms.Label();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
+            this.cmbTema = new System.Windows.Forms.ComboBox();
+            this.labelColor = new System.Windows.Forms.Label();
+            this.labelTema = new System.Windows.Forms.Label();
+            this.panelEncabezado = new System.Windows.Forms.Panel();
+            this.labelTitulo = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panelConfigu.SuspendLayout();
-            this.panelEncabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCBackup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApariencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurarBackup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbApariencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCBackup)).BeginInit();
+            this.panelEncabezado.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelConfigu
@@ -83,79 +83,92 @@
             this.panelConfigu.Size = new System.Drawing.Size(906, 550);
             this.panelConfigu.TabIndex = 0;
             // 
-            // labelTitulo
+            // labelRestaurar
             // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.ForeColor = System.Drawing.Color.White;
-            this.labelTitulo.Location = new System.Drawing.Point(345, 34);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(165, 24);
-            this.labelTitulo.TabIndex = 0;
-            this.labelTitulo.Text = "⚙️ Configuración";
+            this.labelRestaurar.AutoSize = true;
+            this.labelRestaurar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRestaurar.Location = new System.Drawing.Point(595, 313);
+            this.labelRestaurar.Name = "labelRestaurar";
+            this.labelRestaurar.Size = new System.Drawing.Size(216, 19);
+            this.labelRestaurar.TabIndex = 17;
+            this.labelRestaurar.Text = "Ruta Para Restaurar Backups:";
             // 
-            // panelEncabezado
+            // btnRestaurar
             // 
-            this.panelEncabezado.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panelEncabezado.Controls.Add(this.labelTitulo);
-            this.panelEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEncabezado.Location = new System.Drawing.Point(0, 0);
-            this.panelEncabezado.Name = "panelEncabezado";
-            this.panelEncabezado.Size = new System.Drawing.Size(904, 76);
-            this.panelEncabezado.TabIndex = 1;
+            this.btnRestaurar.Location = new System.Drawing.Point(697, 382);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(103, 24);
+            this.btnRestaurar.TabIndex = 16;
+            this.btnRestaurar.Text = "Restaurar Backup";
+            this.btnRestaurar.UseVisualStyleBackColor = true;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
-            // labelTema
+            // btnExaminar2
             // 
-            this.labelTema.AutoSize = true;
-            this.labelTema.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTema.Location = new System.Drawing.Point(368, 313);
-            this.labelTema.Name = "labelTema";
-            this.labelTema.Size = new System.Drawing.Size(132, 19);
-            this.labelTema.TabIndex = 2;
-            this.labelTema.Text = "Tema del Sistema:";
+            this.btnExaminar2.Location = new System.Drawing.Point(608, 382);
+            this.btnExaminar2.Name = "btnExaminar2";
+            this.btnExaminar2.Size = new System.Drawing.Size(75, 24);
+            this.btnExaminar2.TabIndex = 15;
+            this.btnExaminar2.Text = "Examinar";
+            this.btnExaminar2.UseVisualStyleBackColor = true;
+            this.btnExaminar2.Click += new System.EventHandler(this.btnExaminar2_Click);
             // 
-            // labelColor
+            // txtRutaRestore
             // 
-            this.labelColor.AutoSize = true;
-            this.labelColor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColor.Location = new System.Drawing.Point(368, 366);
-            this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(113, 19);
-            this.labelColor.TabIndex = 3;
-            this.labelColor.Text = "Color Principal:";
+            this.txtRutaRestore.Location = new System.Drawing.Point(612, 343);
+            this.txtRutaRestore.Name = "txtRutaRestore";
+            this.txtRutaRestore.Size = new System.Drawing.Size(178, 20);
+            this.txtRutaRestore.TabIndex = 14;
             // 
-            // cmbTema
+            // pbRestaurarBackup
             // 
-            this.cmbTema.FormattingEnabled = true;
-            this.cmbTema.Location = new System.Drawing.Point(353, 335);
-            this.cmbTema.Name = "cmbTema";
-            this.cmbTema.Size = new System.Drawing.Size(149, 21);
-            this.cmbTema.TabIndex = 4;
+            this.pbRestaurarBackup.Image = global::CapaPresentacion.Properties.Resources.proceso_de_datos;
+            this.pbRestaurarBackup.Location = new System.Drawing.Point(626, 121);
+            this.pbRestaurarBackup.Name = "pbRestaurarBackup";
+            this.pbRestaurarBackup.Size = new System.Drawing.Size(151, 150);
+            this.pbRestaurarBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRestaurarBackup.TabIndex = 13;
+            this.pbRestaurarBackup.TabStop = false;
             // 
-            // cmbColor
+            // pbApariencia
             // 
-            this.cmbColor.FormattingEnabled = true;
-            this.cmbColor.Location = new System.Drawing.Point(353, 388);
-            this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(149, 21);
-            this.cmbColor.TabIndex = 5;
+            this.pbApariencia.Image = global::CapaPresentacion.Properties.Resources.cepillar;
+            this.pbApariencia.Location = new System.Drawing.Point(353, 121);
+            this.pbApariencia.Name = "pbApariencia";
+            this.pbApariencia.Size = new System.Drawing.Size(149, 150);
+            this.pbApariencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbApariencia.TabIndex = 12;
+            this.pbApariencia.TabStop = false;
             // 
-            // labelBackup
+            // pbCBackup
             // 
-            this.labelBackup.AutoSize = true;
-            this.labelBackup.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBackup.Location = new System.Drawing.Point(75, 303);
-            this.labelBackup.Name = "labelBackup";
-            this.labelBackup.Size = new System.Drawing.Size(167, 19);
-            this.labelBackup.TabIndex = 6;
-            this.labelBackup.Text = "Ruta Para los Backups:";
+            this.pbCBackup.Image = global::CapaPresentacion.Properties.Resources.gestion_de_bases_de_datos;
+            this.pbCBackup.Location = new System.Drawing.Point(79, 121);
+            this.pbCBackup.Name = "pbCBackup";
+            this.pbCBackup.Size = new System.Drawing.Size(163, 150);
+            this.pbCBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCBackup.TabIndex = 11;
+            this.pbCBackup.TabStop = false;
             // 
-            // txtRutaBackup
+            // btnCrearBackup
             // 
-            this.txtRutaBackup.Location = new System.Drawing.Point(64, 343);
-            this.txtRutaBackup.Name = "txtRutaBackup";
-            this.txtRutaBackup.Size = new System.Drawing.Size(178, 20);
-            this.txtRutaBackup.TabIndex = 7;
+            this.btnCrearBackup.Location = new System.Drawing.Point(153, 382);
+            this.btnCrearBackup.Name = "btnCrearBackup";
+            this.btnCrearBackup.Size = new System.Drawing.Size(89, 24);
+            this.btnCrearBackup.TabIndex = 10;
+            this.btnCrearBackup.Text = "Crear Backup";
+            this.btnCrearBackup.UseVisualStyleBackColor = true;
+            this.btnCrearBackup.Click += new System.EventHandler(this.btnCrearBackup_Click);
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Location = new System.Drawing.Point(64, 382);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(75, 24);
+            this.btnExaminar.TabIndex = 9;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
             // 
             // btnGuardar
             // 
@@ -170,96 +183,83 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnExaminar
+            // txtRutaBackup
             // 
-            this.btnExaminar.Location = new System.Drawing.Point(64, 382);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(75, 24);
-            this.btnExaminar.TabIndex = 9;
-            this.btnExaminar.Text = "Examinar";
-            this.btnExaminar.UseVisualStyleBackColor = true;
-            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            this.txtRutaBackup.Location = new System.Drawing.Point(64, 343);
+            this.txtRutaBackup.Name = "txtRutaBackup";
+            this.txtRutaBackup.Size = new System.Drawing.Size(178, 20);
+            this.txtRutaBackup.TabIndex = 7;
             // 
-            // btnCrearBackup
+            // labelBackup
             // 
-            this.btnCrearBackup.Location = new System.Drawing.Point(153, 382);
-            this.btnCrearBackup.Name = "btnCrearBackup";
-            this.btnCrearBackup.Size = new System.Drawing.Size(89, 24);
-            this.btnCrearBackup.TabIndex = 10;
-            this.btnCrearBackup.Text = "Crear Backup";
-            this.btnCrearBackup.UseVisualStyleBackColor = true;
-            this.btnCrearBackup.Click += new System.EventHandler(this.btnCrearBackup_Click);
+            this.labelBackup.AutoSize = true;
+            this.labelBackup.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBackup.Location = new System.Drawing.Point(75, 303);
+            this.labelBackup.Name = "labelBackup";
+            this.labelBackup.Size = new System.Drawing.Size(167, 19);
+            this.labelBackup.TabIndex = 6;
+            this.labelBackup.Text = "Ruta Para los Backups:";
+            // 
+            // cmbColor
+            // 
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Location = new System.Drawing.Point(353, 388);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(149, 21);
+            this.cmbColor.TabIndex = 5;
+            // 
+            // cmbTema
+            // 
+            this.cmbTema.FormattingEnabled = true;
+            this.cmbTema.Location = new System.Drawing.Point(353, 335);
+            this.cmbTema.Name = "cmbTema";
+            this.cmbTema.Size = new System.Drawing.Size(149, 21);
+            this.cmbTema.TabIndex = 4;
+            // 
+            // labelColor
+            // 
+            this.labelColor.AutoSize = true;
+            this.labelColor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelColor.Location = new System.Drawing.Point(368, 366);
+            this.labelColor.Name = "labelColor";
+            this.labelColor.Size = new System.Drawing.Size(113, 19);
+            this.labelColor.TabIndex = 3;
+            this.labelColor.Text = "Color Principal:";
+            // 
+            // labelTema
+            // 
+            this.labelTema.AutoSize = true;
+            this.labelTema.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTema.Location = new System.Drawing.Point(368, 313);
+            this.labelTema.Name = "labelTema";
+            this.labelTema.Size = new System.Drawing.Size(132, 19);
+            this.labelTema.TabIndex = 2;
+            this.labelTema.Text = "Tema del Sistema:";
+            // 
+            // panelEncabezado
+            // 
+            this.panelEncabezado.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelEncabezado.Controls.Add(this.labelTitulo);
+            this.panelEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEncabezado.Location = new System.Drawing.Point(0, 0);
+            this.panelEncabezado.Name = "panelEncabezado";
+            this.panelEncabezado.Size = new System.Drawing.Size(904, 76);
+            this.panelEncabezado.TabIndex = 1;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.White;
+            this.labelTitulo.Location = new System.Drawing.Point(345, 34);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(165, 24);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "⚙️ Configuración";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pbCBackup
-            // 
-            this.pbCBackup.Image = global::CapaPresentacion.Properties.Resources.gestion_de_bases_de_datos;
-            this.pbCBackup.Location = new System.Drawing.Point(79, 121);
-            this.pbCBackup.Name = "pbCBackup";
-            this.pbCBackup.Size = new System.Drawing.Size(163, 150);
-            this.pbCBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCBackup.TabIndex = 11;
-            this.pbCBackup.TabStop = false;
-            // 
-            // pbApariencia
-            // 
-            this.pbApariencia.Image = global::CapaPresentacion.Properties.Resources.cepillar;
-            this.pbApariencia.Location = new System.Drawing.Point(353, 121);
-            this.pbApariencia.Name = "pbApariencia";
-            this.pbApariencia.Size = new System.Drawing.Size(149, 150);
-            this.pbApariencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbApariencia.TabIndex = 12;
-            this.pbApariencia.TabStop = false;
-            // 
-            // pbRestaurarBackup
-            // 
-            this.pbRestaurarBackup.Image = global::CapaPresentacion.Properties.Resources.proceso_de_datos;
-            this.pbRestaurarBackup.Location = new System.Drawing.Point(626, 121);
-            this.pbRestaurarBackup.Name = "pbRestaurarBackup";
-            this.pbRestaurarBackup.Size = new System.Drawing.Size(151, 150);
-            this.pbRestaurarBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRestaurarBackup.TabIndex = 13;
-            this.pbRestaurarBackup.TabStop = false;
-            // 
-            // txtRutaRestore
-            // 
-            this.txtRutaRestore.Location = new System.Drawing.Point(612, 343);
-            this.txtRutaRestore.Name = "txtRutaRestore";
-            this.txtRutaRestore.Size = new System.Drawing.Size(178, 20);
-            this.txtRutaRestore.TabIndex = 14;
-            // 
-            // btnExaminar2
-            // 
-            this.btnExaminar2.Location = new System.Drawing.Point(608, 382);
-            this.btnExaminar2.Name = "btnExaminar2";
-            this.btnExaminar2.Size = new System.Drawing.Size(75, 24);
-            this.btnExaminar2.TabIndex = 15;
-            this.btnExaminar2.Text = "Examinar";
-            this.btnExaminar2.UseVisualStyleBackColor = true;
-            this.btnExaminar2.Click += new System.EventHandler(this.btnExaminar2_Click);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Location = new System.Drawing.Point(697, 382);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(103, 24);
-            this.btnRestaurar.TabIndex = 16;
-            this.btnRestaurar.Text = "Restaurar Backup";
-            this.btnRestaurar.UseVisualStyleBackColor = true;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
-            // labelRestaurar
-            // 
-            this.labelRestaurar.AutoSize = true;
-            this.labelRestaurar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRestaurar.Location = new System.Drawing.Point(595, 313);
-            this.labelRestaurar.Name = "labelRestaurar";
-            this.labelRestaurar.Size = new System.Drawing.Size(216, 19);
-            this.labelRestaurar.TabIndex = 17;
-            this.labelRestaurar.Text = "Ruta Para Restaurar Backups:";
             // 
             // FrmConfiguracion
             // 
@@ -273,11 +273,11 @@
             this.Load += new System.EventHandler(this.FrmConfiguracion_Load);
             this.panelConfigu.ResumeLayout(false);
             this.panelConfigu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRestaurarBackup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbApariencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCBackup)).EndInit();
             this.panelEncabezado.ResumeLayout(false);
             this.panelEncabezado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCBackup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbApariencia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRestaurarBackup)).EndInit();
             this.ResumeLayout(false);
 
         }

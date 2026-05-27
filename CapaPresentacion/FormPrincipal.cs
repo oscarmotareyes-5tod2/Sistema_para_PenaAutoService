@@ -100,5 +100,10 @@ namespace CapaPresentacion
             AbrirFormulario(new FrmConfiguracion());
             LTitulo.Text = "Configuración del Sistema";
         }
+
+        private void PanelLateral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

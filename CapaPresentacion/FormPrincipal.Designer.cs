@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.PanelLateral = new System.Windows.Forms.Panel();
-            this.btnEmpleados = new System.Windows.Forms.Button();
+            this.pbusuarios = new System.Windows.Forms.PictureBox();
+            this.pbhistorial = new System.Windows.Forms.PictureBox();
+            this.pbIngresos = new System.Windows.Forms.PictureBox();
+            this.pbvehiculos = new System.Windows.Forms.PictureBox();
+            this.pbcliente = new System.Windows.Forms.PictureBox();
             this.panelCerrarseccion = new System.Windows.Forms.Panel();
             this.btnCerrarSeccion = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
@@ -41,33 +46,26 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.LTitulo = new System.Windows.Forms.Label();
             this.PanelSuperior = new System.Windows.Forms.Panel();
+            this.pbConfiguracion = new System.Windows.Forms.PictureBox();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelRol = new System.Windows.Forms.Label();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.labelBienbenida = new System.Windows.Forms.Label();
-            this.pbConfiguracion = new System.Windows.Forms.PictureBox();
             this.pictureBoxuser = new System.Windows.Forms.PictureBox();
-            this.pbusuarios = new System.Windows.Forms.PictureBox();
-            this.pbhistorial = new System.Windows.Forms.PictureBox();
-            this.pbIngresos = new System.Windows.Forms.PictureBox();
-            this.pbEmpleados = new System.Windows.Forms.PictureBox();
-            this.pbvehiculos = new System.Windows.Forms.PictureBox();
-            this.pbcliente = new System.Windows.Forms.PictureBox();
-            this.pictureIcon = new System.Windows.Forms.PictureBox();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pbPrincipal = new System.Windows.Forms.PictureBox();
             this.PanelLateral.SuspendLayout();
-            this.panelCerrarseccion.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            this.PanelSuperior.SuspendLayout();
-            this.PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConfiguracion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbusuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhistorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIngresos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbvehiculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcliente)).BeginInit();
+            this.panelCerrarseccion.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
+            this.PanelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConfiguracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).BeginInit();
+            this.PanelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelLateral
@@ -77,10 +75,8 @@
             this.PanelLateral.Controls.Add(this.pbusuarios);
             this.PanelLateral.Controls.Add(this.pbhistorial);
             this.PanelLateral.Controls.Add(this.pbIngresos);
-            this.PanelLateral.Controls.Add(this.pbEmpleados);
             this.PanelLateral.Controls.Add(this.pbvehiculos);
             this.PanelLateral.Controls.Add(this.pbcliente);
-            this.PanelLateral.Controls.Add(this.btnEmpleados);
             this.PanelLateral.Controls.Add(this.panelCerrarseccion);
             this.PanelLateral.Controls.Add(this.panelLogo);
             this.PanelLateral.Controls.Add(this.btnVehiculos);
@@ -93,20 +89,57 @@
             this.PanelLateral.Name = "PanelLateral";
             this.PanelLateral.Size = new System.Drawing.Size(226, 729);
             this.PanelLateral.TabIndex = 0;
+            this.PanelLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelLateral_Paint);
             // 
-            // btnEmpleados
+            // pbusuarios
             // 
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleados.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleados.Location = new System.Drawing.Point(75, 297);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(139, 44);
-            this.btnEmpleados.TabIndex = 14;
-            this.btnEmpleados.Text = "Empleados";
-            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.pbusuarios.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__1_;
+            this.pbusuarios.Location = new System.Drawing.Point(33, 368);
+            this.pbusuarios.Name = "pbusuarios";
+            this.pbusuarios.Size = new System.Drawing.Size(36, 36);
+            this.pbusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbusuarios.TabIndex = 25;
+            this.pbusuarios.TabStop = false;
+            // 
+            // pbhistorial
+            // 
+            this.pbhistorial.Image = global::CapaPresentacion.Properties.Resources.tiempo_adelante;
+            this.pbhistorial.Location = new System.Drawing.Point(33, 440);
+            this.pbhistorial.Name = "pbhistorial";
+            this.pbhistorial.Size = new System.Drawing.Size(36, 36);
+            this.pbhistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbhistorial.TabIndex = 24;
+            this.pbhistorial.TabStop = false;
+            // 
+            // pbIngresos
+            // 
+            this.pbIngresos.Image = global::CapaPresentacion.Properties.Resources.bandeja_de_entrada__1_;
+            this.pbIngresos.Location = new System.Drawing.Point(33, 296);
+            this.pbIngresos.Name = "pbIngresos";
+            this.pbIngresos.Size = new System.Drawing.Size(36, 36);
+            this.pbIngresos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbIngresos.TabIndex = 23;
+            this.pbIngresos.TabStop = false;
+            // 
+            // pbvehiculos
+            // 
+            this.pbvehiculos.Image = global::CapaPresentacion.Properties.Resources.lado_del_coche;
+            this.pbvehiculos.Location = new System.Drawing.Point(33, 227);
+            this.pbvehiculos.Name = "pbvehiculos";
+            this.pbvehiculos.Size = new System.Drawing.Size(36, 36);
+            this.pbvehiculos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbvehiculos.TabIndex = 21;
+            this.pbvehiculos.TabStop = false;
+            // 
+            // pbcliente
+            // 
+            this.pbcliente.Image = global::CapaPresentacion.Properties.Resources.atencion_al_cliente__3_;
+            this.pbcliente.Location = new System.Drawing.Point(33, 156);
+            this.pbcliente.Name = "pbcliente";
+            this.pbcliente.Size = new System.Drawing.Size(36, 36);
+            this.pbcliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcliente.TabIndex = 20;
+            this.pbcliente.TabStop = false;
             // 
             // panelCerrarseccion
             // 
@@ -143,6 +176,17 @@
             this.panelLogo.Size = new System.Drawing.Size(222, 98);
             this.panelLogo.TabIndex = 12;
             // 
+            // pictureIcon
+            // 
+            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIcon.Image = global::CapaPresentacion.Properties.Resources.herramientas__2_;
+            this.pictureIcon.Location = new System.Drawing.Point(15, 37);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(42, 37);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIcon.TabIndex = 2;
+            this.pictureIcon.TabStop = false;
+            // 
             // btnPrincipal
             // 
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
@@ -164,7 +208,7 @@
             this.btnVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehiculos.ForeColor = System.Drawing.Color.White;
-            this.btnVehiculos.Location = new System.Drawing.Point(75, 230);
+            this.btnVehiculos.Location = new System.Drawing.Point(75, 227);
             this.btnVehiculos.Name = "btnVehiculos";
             this.btnVehiculos.Size = new System.Drawing.Size(129, 44);
             this.btnVehiculos.TabIndex = 10;
@@ -179,7 +223,7 @@
             this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.Color.White;
-            this.btnHistorial.Location = new System.Drawing.Point(75, 445);
+            this.btnHistorial.Location = new System.Drawing.Point(75, 440);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(139, 44);
             this.btnHistorial.TabIndex = 6;
@@ -193,7 +237,7 @@
             this.btnIngresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresos.ForeColor = System.Drawing.Color.White;
-            this.btnIngresos.Location = new System.Drawing.Point(75, 371);
+            this.btnIngresos.Location = new System.Drawing.Point(75, 296);
             this.btnIngresos.Name = "btnIngresos";
             this.btnIngresos.Size = new System.Drawing.Size(139, 44);
             this.btnIngresos.TabIndex = 5;
@@ -208,7 +252,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Location = new System.Drawing.Point(75, 512);
+            this.btnUsuarios.Location = new System.Drawing.Point(75, 368);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(139, 44);
             this.btnUsuarios.TabIndex = 4;
@@ -258,6 +302,18 @@
             this.PanelSuperior.Size = new System.Drawing.Size(1124, 100);
             this.PanelSuperior.TabIndex = 1;
             // 
+            // pbConfiguracion
+            // 
+            this.pbConfiguracion.BackColor = System.Drawing.Color.Transparent;
+            this.pbConfiguracion.Image = global::CapaPresentacion.Properties.Resources.ajustes;
+            this.pbConfiguracion.Location = new System.Drawing.Point(1069, 33);
+            this.pbConfiguracion.Name = "pbConfiguracion";
+            this.pbConfiguracion.Size = new System.Drawing.Size(42, 37);
+            this.pbConfiguracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbConfiguracion.TabIndex = 13;
+            this.pbConfiguracion.TabStop = false;
+            this.pbConfiguracion.Click += new System.EventHandler(this.pbConfiguracion_Click);
+            // 
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
@@ -278,38 +334,6 @@
             this.labelRol.TabIndex = 11;
             this.labelRol.Text = "Rol";
             // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelContenedor.Controls.Add(this.labelBienbenida);
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(226, 100);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1124, 629);
-            this.PanelContenedor.TabIndex = 11;
-            // 
-            // labelBienbenida
-            // 
-            this.labelBienbenida.AutoSize = true;
-            this.labelBienbenida.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBienbenida.Location = new System.Drawing.Point(365, 242);
-            this.labelBienbenida.Name = "labelBienbenida";
-            this.labelBienbenida.Size = new System.Drawing.Size(393, 40);
-            this.labelBienbenida.TabIndex = 11;
-            this.labelBienbenida.Text = "¡Bienvenido/a al Sistema!";
-            // 
-            // pbConfiguracion
-            // 
-            this.pbConfiguracion.BackColor = System.Drawing.Color.Transparent;
-            this.pbConfiguracion.Image = global::CapaPresentacion.Properties.Resources.ajustes;
-            this.pbConfiguracion.Location = new System.Drawing.Point(1069, 33);
-            this.pbConfiguracion.Name = "pbConfiguracion";
-            this.pbConfiguracion.Size = new System.Drawing.Size(42, 37);
-            this.pbConfiguracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbConfiguracion.TabIndex = 13;
-            this.pbConfiguracion.TabStop = false;
-            this.pbConfiguracion.Click += new System.EventHandler(this.pbConfiguracion_Click);
-            // 
             // pictureBoxuser
             // 
             this.pictureBoxuser.BackColor = System.Drawing.Color.Transparent;
@@ -321,76 +345,26 @@
             this.pictureBoxuser.TabIndex = 10;
             this.pictureBoxuser.TabStop = false;
             // 
-            // pbusuarios
+            // PanelContenedor
             // 
-            this.pbusuarios.Image = global::CapaPresentacion.Properties.Resources.agregar_usuario__1_;
-            this.pbusuarios.Location = new System.Drawing.Point(33, 512);
-            this.pbusuarios.Name = "pbusuarios";
-            this.pbusuarios.Size = new System.Drawing.Size(36, 36);
-            this.pbusuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbusuarios.TabIndex = 25;
-            this.pbusuarios.TabStop = false;
+            this.PanelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelContenedor.Controls.Add(this.pbPrincipal);
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(226, 100);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1124, 629);
+            this.PanelContenedor.TabIndex = 11;
             // 
-            // pbhistorial
+            // pbPrincipal
             // 
-            this.pbhistorial.Image = global::CapaPresentacion.Properties.Resources.tiempo_adelante;
-            this.pbhistorial.Location = new System.Drawing.Point(33, 445);
-            this.pbhistorial.Name = "pbhistorial";
-            this.pbhistorial.Size = new System.Drawing.Size(36, 36);
-            this.pbhistorial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbhistorial.TabIndex = 24;
-            this.pbhistorial.TabStop = false;
-            // 
-            // pbIngresos
-            // 
-            this.pbIngresos.Image = global::CapaPresentacion.Properties.Resources.bandeja_de_entrada__1_;
-            this.pbIngresos.Location = new System.Drawing.Point(33, 371);
-            this.pbIngresos.Name = "pbIngresos";
-            this.pbIngresos.Size = new System.Drawing.Size(36, 36);
-            this.pbIngresos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbIngresos.TabIndex = 23;
-            this.pbIngresos.TabStop = false;
-            // 
-            // pbEmpleados
-            // 
-            this.pbEmpleados.Image = global::CapaPresentacion.Properties.Resources.empleados_mujer_hombre;
-            this.pbEmpleados.Location = new System.Drawing.Point(33, 297);
-            this.pbEmpleados.Name = "pbEmpleados";
-            this.pbEmpleados.Size = new System.Drawing.Size(36, 36);
-            this.pbEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEmpleados.TabIndex = 22;
-            this.pbEmpleados.TabStop = false;
-            // 
-            // pbvehiculos
-            // 
-            this.pbvehiculos.Image = global::CapaPresentacion.Properties.Resources.lado_del_coche;
-            this.pbvehiculos.Location = new System.Drawing.Point(33, 230);
-            this.pbvehiculos.Name = "pbvehiculos";
-            this.pbvehiculos.Size = new System.Drawing.Size(36, 36);
-            this.pbvehiculos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbvehiculos.TabIndex = 21;
-            this.pbvehiculos.TabStop = false;
-            // 
-            // pbcliente
-            // 
-            this.pbcliente.Image = global::CapaPresentacion.Properties.Resources.atencion_al_cliente__3_;
-            this.pbcliente.Location = new System.Drawing.Point(33, 156);
-            this.pbcliente.Name = "pbcliente";
-            this.pbcliente.Size = new System.Drawing.Size(36, 36);
-            this.pbcliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbcliente.TabIndex = 20;
-            this.pbcliente.TabStop = false;
-            // 
-            // pictureIcon
-            // 
-            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIcon.Image = global::CapaPresentacion.Properties.Resources.herramientas__2_;
-            this.pictureIcon.Location = new System.Drawing.Point(15, 37);
-            this.pictureIcon.Name = "pictureIcon";
-            this.pictureIcon.Size = new System.Drawing.Size(42, 37);
-            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIcon.TabIndex = 2;
-            this.pictureIcon.TabStop = false;
+            this.pbPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbPrincipal.Image = global::CapaPresentacion.Properties.Resources.logotaller;
+            this.pbPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.pbPrincipal.Name = "pbPrincipal";
+            this.pbPrincipal.Size = new System.Drawing.Size(1122, 627);
+            this.pbPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPrincipal.TabIndex = 0;
+            this.pbPrincipal.TabStop = false;
             // 
             // FormPrincipal
             // 
@@ -406,21 +380,20 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.PanelLateral.ResumeLayout(false);
-            this.panelCerrarseccion.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.PanelSuperior.ResumeLayout(false);
-            this.PanelSuperior.PerformLayout();
-            this.PanelContenedor.ResumeLayout(false);
-            this.PanelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConfiguracion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbusuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbhistorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIngresos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbvehiculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcliente)).EndInit();
+            this.panelCerrarseccion.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
+            this.PanelSuperior.ResumeLayout(false);
+            this.PanelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConfiguracion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxuser)).EndInit();
+            this.PanelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrincipal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -437,15 +410,12 @@
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Label LTitulo;
         private System.Windows.Forms.Panel PanelSuperior;
-        private System.Windows.Forms.Label labelBienbenida;
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelCerrarseccion;
-        private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.PictureBox pbusuarios;
         private System.Windows.Forms.PictureBox pbhistorial;
         private System.Windows.Forms.PictureBox pbIngresos;
-        private System.Windows.Forms.PictureBox pbEmpleados;
         private System.Windows.Forms.PictureBox pbvehiculos;
         private System.Windows.Forms.PictureBox pbcliente;
         private System.Windows.Forms.PictureBox pictureBoxuser;
@@ -453,6 +423,7 @@
         private System.Windows.Forms.Label labelRol;
         public System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.PictureBox pbConfiguracion;
+        private System.Windows.Forms.PictureBox pbPrincipal;
     }
 }
 

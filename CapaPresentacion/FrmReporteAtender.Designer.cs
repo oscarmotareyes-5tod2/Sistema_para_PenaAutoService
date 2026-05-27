@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class FrmBienbenida
+    partial class FrmReporteAtender
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbBienbenida = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBienbenida)).BeginInit();
+            this.RvAtender = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // pbBienbenida
+            // RvAtender
             // 
-            this.pbBienbenida.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbBienbenida.Image = global::CapaPresentacion.Properties.Resources.logotaller;
-            this.pbBienbenida.Location = new System.Drawing.Point(0, 0);
-            this.pbBienbenida.Name = "pbBienbenida";
-            this.pbBienbenida.Size = new System.Drawing.Size(1104, 729);
-            this.pbBienbenida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbBienbenida.TabIndex = 0;
-            this.pbBienbenida.TabStop = false;
+            this.RvAtender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RvAtender.Location = new System.Drawing.Point(0, 0);
+            this.RvAtender.Name = "RvAtender";
+            this.RvAtender.ServerReport.BearerToken = null;
+            this.RvAtender.Size = new System.Drawing.Size(800, 450);
+            this.RvAtender.TabIndex = 0;
             // 
-            // FrmBienbenida
+            // FrmReporteAtender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 729);
-            this.Controls.Add(this.pbBienbenida);
-            this.Name = "FrmBienbenida";
-            this.Text = "FrmVehiculos";
-            ((System.ComponentModel.ISupportInitialize)(this.pbBienbenida)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RvAtender);
+            this.Name = "FrmReporteAtender";
+            this.Text = "FrmReporteAtender";
+            this.Load += new System.EventHandler(this.FrmReporteAtender_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbBienbenida;
+        private Microsoft.Reporting.WinForms.ReportViewer RvAtender;
     }
 }
