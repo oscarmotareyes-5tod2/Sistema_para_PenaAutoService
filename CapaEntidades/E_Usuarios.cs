@@ -19,5 +19,7 @@ namespace CapaEntidades
         public int Activo { get; set; }
 
         public int IdRol { get; set; }
+
+        public string NombreRol { get; set; }
     }
 }

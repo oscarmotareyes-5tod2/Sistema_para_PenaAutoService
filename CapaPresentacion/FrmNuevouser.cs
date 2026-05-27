@@ -222,6 +222,7 @@ namespace CapaPresentacion
 
                     negocio.InsertarUsuario(usuario);
                     ListarUsuarios();
+                    LimpiarCampos();
                     
 
                     MessageBox.Show(
@@ -234,6 +235,7 @@ namespace CapaPresentacion
 
                     negocio.ActualizarUsuario(usuario);
                     ListarUsuarios();
+                    LimpiarCampos();
 
                     // CONFIRMAR ACTUALIZACIÓN
                     DialogResult resultado =
@@ -275,6 +277,15 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtUsuario.Clear();
+            txtClave.Clear();
+            cmbRol.Items.Clear();
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

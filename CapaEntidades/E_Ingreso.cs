@@ -27,7 +27,7 @@ namespace CapaEntidades
         public int Anio { get; set; }
 
         // ORDEN
-        public int IdEmpleado { get; set; }
+        public int IdUsuario { get; set; }
 
         public string Fallas { get; set; }
 
@@ -36,6 +36,5 @@ namespace CapaEntidades
 
         public int Cantidad { get; set; }
 
-        public int IdMecanico { get; set; }
     }
 }

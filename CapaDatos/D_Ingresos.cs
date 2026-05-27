@@ -38,10 +38,14 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Anio",ingreso.Anio);
 
                 // ORDEN
-                cmd.Parameters.AddWithValue("@IdEmpleado",ingreso.IdEmpleado);
+                cmd.Parameters.AddWithValue("@IdUsuario",ingreso.IdUsuario);
 
                 cmd.Parameters.AddWithValue("@Fallas",ingreso.Fallas);
 
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
             }
         }
 

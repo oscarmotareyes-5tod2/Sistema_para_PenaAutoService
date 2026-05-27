@@ -11,6 +11,25 @@ namespace CapaDatos
 {
     public class D_Usuarios
     {
+        public DataTable Login(string usuario, string clave)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand("sp_Login", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Username", usuario);
+                cmd.Parameters.AddWithValue("@PasswordHash", clave);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
         public void InsertarUsuario(E_Usuarios usuario)
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())

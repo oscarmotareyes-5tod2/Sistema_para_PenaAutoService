@@ -35,9 +35,50 @@ namespace CapaPresentacion
 
         }
 
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtTelefono.Clear();
+            txtCorreo.Clear();
+            txtDireccion.Clear();
+            txtPlaca.Clear();
+            txtMarca.Clear();
+            txtModelo.Clear();
+            txtAnio.Clear();
+            txtFalla.Clear();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (HayDatosEnFormulario())
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Hay datos ingresados. ¿Seguro que deseas cancelar?",
+                    "Confirmar cancelación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (resultado == DialogResult.No)
+                    return;
+            }
+
+            else
+            {
+                this.Close();
+            }
+        }
+        private bool HayDatosEnFormulario()
+        {
+            return !string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                   !string.IsNullOrWhiteSpace(txtTelefono.Text) ||
+                   !string.IsNullOrWhiteSpace(txtCorreo.Text) ||
+                   !string.IsNullOrWhiteSpace(txtDireccion.Text) ||
+                   !string.IsNullOrWhiteSpace(txtPlaca.Text) ||
+                   !string.IsNullOrWhiteSpace(txtMarca.Text) ||
+                   !string.IsNullOrWhiteSpace(txtModelo.Text) ||
+                   !string.IsNullOrWhiteSpace(txtAnio.Text) ||
+                   !string.IsNullOrWhiteSpace(txtFalla.Text);
         }
 
         private void FrmNuevoIngreso_Load(object sender, EventArgs e)
@@ -46,7 +87,6 @@ namespace CapaPresentacion
 
             Region = System.Drawing.Region.FromHrgn(
                 CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            ValidarFormulario();
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -205,15 +245,17 @@ namespace CapaPresentacion
                 ingreso.Anio =Convert.ToInt32(txtAnio.Text);
 
                 // ORDEN
-                ingreso.IdEmpleado = 3;
+                ingreso.IdUsuario = Sesion.UsuarioActual.IdUsuario;
 
                 ingreso.Fallas =txtFalla.Text;
 
                 N_Ingresos negocio =new N_Ingresos();
 
                 negocio.RegistrarIngresoCompleto(ingreso);
-
+                ValidarFormulario();
                 MessageBox.Show("Ingreso registrado correctamente");
+                LimpiarCampos();
+                
 
             }
             catch (Exception ex)
@@ -221,6 +263,8 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message);
             }
         }
+
+
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {

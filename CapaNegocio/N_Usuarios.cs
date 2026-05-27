@@ -13,6 +13,11 @@ namespace CapaNegocio
     {
         D_Usuarios datos = new D_Usuarios();
 
+        public DataTable Login(string usuario, string clave)
+        {
+            return datos.Login(usuario, clave);
+        }
+
         public void InsertarUsuario(E_Usuarios usuario)
         {
             datos.InsertarUsuario(usuario);

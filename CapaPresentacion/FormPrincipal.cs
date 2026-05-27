@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
 
 namespace CapaPresentacion
 {
@@ -45,6 +46,9 @@ namespace CapaPresentacion
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+          labelRol.Text= Sesion.UsuarioActual.NombreRol;
+          labelUsuario.Text = Sesion.UsuarioActual.Nombre;
+
             N_Configuracion negocio = new N_Configuracion();
 
             DataTable dt =negocio.ObtenerConfiguracion();

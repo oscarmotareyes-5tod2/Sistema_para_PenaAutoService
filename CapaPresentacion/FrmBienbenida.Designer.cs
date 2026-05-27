@@ -51,6 +51,7 @@
             this.Controls.Add(this.pbBienbenida);
             this.Name = "FrmBienbenida";
             this.Text = "FrmVehiculos";
+            this.Load += new System.EventHandler(this.FrmBienbenida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBienbenida)).EndInit();
             this.ResumeLayout(false);
 
